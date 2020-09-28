@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "burgerqueen": "burgerqueen-c7131"
+  },
+  "targets": {
+    "burgerqueen-c7131": {
+      "hosting": {
+        "burgerQueen": [
+          "burgerqueen-c7131"
+        ]
+      }
+    }
+  }
+}
