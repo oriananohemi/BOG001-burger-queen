@@ -8,7 +8,33 @@
   box-sizing: border-box;
 }
 
+.flex-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.responsive-image {
+  max-width: 100%;
+}
+
 body {
+  background: linear-gradient(rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .7) 100%), url('assets/images/fondoMobile.jpeg') ;
+  background-position: top;
+  font-size: 18px;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: 700px) {
+  body {
+    background: linear-gradient(rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .7) 100%), url('assets/images/fondoTablet.jpeg');
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1020px) {
+  body {
+    background: linear-gradient(rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .7) 100%), url('assets/images/fondoDestokp.jpeg');
+  }
 }

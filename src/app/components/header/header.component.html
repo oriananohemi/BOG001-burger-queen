@@ -1,11 +1,15 @@
-<nav>
-  <ul>
-    <li>
-      <!-- <a [router-link]="/pedidos">Pedidos</a> -->
-    </li>
-    <li>
-      <!-- <a [router-link]="/mesero">Mesero</a> -->
-    </li>
-  </ul>
-</nav>
-<img [src]="logo" alt="">
+<header>
+  <nav>
+    <ul class="flex-container">
+      <li>
+        <a class="header__link">Pedidos</a>
+      </li>
+      <li>
+        <a class="header__link">Mesero</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="header__brand">
+    <img class="responsive-image" [src]="logo" alt="">
+  </div>
+</header>
