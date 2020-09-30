@@ -1,12 +1,41 @@
-.header__brand {
-  display: block;
-  margin: 0 auto;
-  width: 350px;
+.brand {
+  margin: 50px auto;
+  text-align: center;
+  width: 300px;
 }
 
 .input__container {
-  border: 1px solid var(--primary);
+  border: 2px solid var(--primary);
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 50px auto;
   width: 80%;
+}
+
+.input {
+  background-color: transparent;
+  border: 0;
+  color: var(--white);
+  font-size: 16px;
+  outline: none;
+  padding-left: 5px;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .brand {
+    width: 500px;
+  }
+  .input__container {
+    width: 60%;
+  }
+  
+}
+
+@media (min-width: 1020px) {
+  .brand {
+    width: 800px;
+  }
+  .input__container {
+    width: 40%;
+  }
 }
