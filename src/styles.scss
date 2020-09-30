@@ -2,10 +2,13 @@
 
 :root {
   --primary: #F4914A;
+  --white: #fff;
 }
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .flex-container {
@@ -14,12 +17,35 @@
   justify-content: space-between;
 }
 
+.button-medium {
+  background-color: var(--primary);
+  font-size: 16px;
+  border-radius: 10px;
+  color: var(--white);
+  padding: 10px 15px;
+}
+
+.button-long {
+  background-color: var(--primary);
+  border-radius: 10px;
+  color: var(--white);
+}
+
+.input {
+  background-color: transparent;
+  border: 0;
+  color: var(--white);
+  font-size: 16px;
+  outline: none;
+  padding-left: 5px;
+}
+
 .responsive-image {
   max-width: 100%;
 }
 
 body {
-  background: linear-gradient(rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .7) 100%), url('assets/images/fondoMobile.jpeg') ;
+  background: linear-gradient(rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, .6) 100%), url('assets/images/fondoMobile.jpeg') ;
   background-position: top;
   font-size: 18px;
   margin: 0;
@@ -28,13 +54,13 @@ body {
 
 @media (min-width: 700px) {
   body {
-    background: linear-gradient(rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .7) 100%), url('assets/images/fondoTablet.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, .6) 100%), url('assets/images/fondoTablet.jpeg');
     font-size: 22px;
   }
 }
 
 @media (min-width: 1020px) {
   body {
-    background: linear-gradient(rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .7) 100%), url('assets/images/fondoDestokp.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, .6) 100%), url('assets/images/fondoDestokp.jpeg');
   }
 }

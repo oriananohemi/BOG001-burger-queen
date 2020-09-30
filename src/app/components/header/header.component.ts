@@ -7,8 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  logo = 'assets/images/brand.png';
-
   constructor() { }
 
 }
