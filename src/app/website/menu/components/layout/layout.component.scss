@@ -1,5 +1,6 @@
 .menu {
   border: 1px solid var(--primary);
+  background-color: var(--black);
   margin: 50px auto;
   text-align: center;
   padding: 10px;
@@ -8,4 +9,23 @@
 
 .menu-title {
   color: var(--primary);
+}
+
+@media (min-width: 700px) {
+  .menu {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .menu-flex {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu {
+    margin: 50px 20px;
+    width: 30%;
+  }
 }
