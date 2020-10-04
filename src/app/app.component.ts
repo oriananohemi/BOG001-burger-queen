@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
-import { Product } from './definitions/product.model';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

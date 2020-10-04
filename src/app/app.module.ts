@@ -8,26 +8,14 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { ProductComponent } from './components/product/product.component';
-import { HomeComponent } from './components/home/home.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { DesayunoComponent } from './components/desayuno/desayuno.component';
-import { ComidaComponent } from './components/comida/comida.component';
-import { PedidosComponent } from './components/pedidos/pedidos.component';
-import { PedidoComponent } from './components/pedido/pedido.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
+// import { CoreModule } from '@core/core.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    ProductComponent,
-    HomeComponent,
-    MenuComponent,
-    DesayunoComponent,
-    ComidaComponent,
-    PedidosComponent,
-    PedidoComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +23,9 @@ import { PedidoComponent } from './components/pedido/pedido.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

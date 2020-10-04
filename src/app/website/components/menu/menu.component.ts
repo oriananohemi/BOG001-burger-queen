@@ -7,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  menu = [
+    {
+      img: 'assets/images/cafeAmericano.jpg',
+      title: 'Desayuno',
+    },
+    {
+      img: 'assets/images/cafeAmericano.jpg',
+      title: 'Comida',
+    },
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
