@@ -13,9 +13,4 @@ export class AppComponent {
     this.items = firestore.collection('items').valueChanges();
   }
   title = 'burgerQueen';
-
-  clickProduct(id: number) {
-    console.log('product');
-    console.log(id);
-  }
 }
