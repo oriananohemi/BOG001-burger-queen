@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300&display=swap");
 
 :root {
-  --primary: #F4914A;
+  --primary: #f4914a;
   --white: #fff;
   --black: #000;
 }
@@ -43,8 +43,14 @@ a {
   max-width: 100%;
 }
 
+.title {
+  color: var(--primary);
+  text-align: center;
+}
+
 body {
-  background: linear-gradient(rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, .6) 100%), url('assets/images/fondoMobile.jpeg') ;
+  background: linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),
+    url("assets/images/fondoMobile.jpeg");
   background-position: top;
   font-size: 18px;
   margin: 0;
@@ -53,13 +59,15 @@ body {
 
 @media (min-width: 700px) {
   body {
-    background: linear-gradient(rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, .6) 100%), url('assets/images/fondoTablet.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),
+      url("assets/images/fondoTablet.jpeg");
     font-size: 22px;
   }
 }
 
 @media (min-width: 1020px) {
   body {
-    background: linear-gradient(rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, .6) 100%), url('assets/images/fondoDestokp.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),
+      url("assets/images/fondoDestokp.jpeg");
   }
 }

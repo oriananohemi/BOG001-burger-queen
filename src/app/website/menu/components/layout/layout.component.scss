@@ -15,15 +15,15 @@
   .menu {
     width: 40%;
   }
-}
 
-@media (min-width: 1020px) {
   .menu-flex {
     align-items: center;
     display: flex;
     justify-content: center;
   }
+}
 
+@media (min-width: 1020px) {
   .menu {
     margin: 50px 20px;
     width: 30%;

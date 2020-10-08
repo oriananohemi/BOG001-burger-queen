@@ -18,7 +18,10 @@ export class LayoutComponent implements OnInit {
     },
   ];
 
+  client = localStorage.getItem('client');
+
   constructor() { }
+
 
   ngOnInit(): void {
   }
