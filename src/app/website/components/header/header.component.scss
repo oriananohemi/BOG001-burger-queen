@@ -1,7 +1,12 @@
 .header {
   padding: 20px 25px;
+  margin-bottom: 50px;
 }
 
 .header__link {
   color: var(--primary);
+}
+
+.header__brand {
+  width: 180px;
 }

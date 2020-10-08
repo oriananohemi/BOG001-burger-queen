@@ -4,6 +4,11 @@
       <li>
         <a routerLink="pedidos" class="header__link">Pedidos</a>
       </li>
+      <li class="header__brand" *ngIf="router.url !== '/'">
+        <a routerLink="/">
+          <img class="responsive-image" [src]="logo" alt="">
+        </a>
+      </li>
       <li>
         <a class="header__link">Mesero</a>
       </li>
