@@ -1,4 +1,12 @@
-.product-image {
-  max-width: 100%;
-  width: 20%;
+.product {
+  background-color: var(--black);
+  border: 1px solid var(--primary);
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  width: 60%;
+}
+
+.product__description {
+  margin: 10px 0;
 }

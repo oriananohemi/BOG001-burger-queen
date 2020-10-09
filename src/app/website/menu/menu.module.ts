@@ -6,7 +6,6 @@ import { MenuComponent } from './menu/menu.component';
 import { MenuListComponent } from './menu-list/menu-list.component';
 import { SharedModule } from '../../shared/shared.module';
 
-
 @NgModule({
   declarations: [
     MenuComponent,

@@ -17,6 +17,7 @@ export class ProductComponent implements OnInit {
 
   addCart() {
     console.log('Agregar al carrito');
-    this.productClicked.emit(this.product.id);
+    console.log(this.product);
+    this.productClicked.emit(this.product);
   }
 }

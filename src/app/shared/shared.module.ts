@@ -6,11 +6,13 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './components/header/header.component';
 import { ProductComponent } from './components/product/product.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    ProductComponent
+    ProductComponent,
+    CheckoutComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { ProductComponent } from './components/product/product.component';
   ],
   exports: [
     HeaderComponent,
-    ProductComponent
+    ProductComponent,
+    CheckoutComponent
   ]
 })
 export class SharedModule { }
