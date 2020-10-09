@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LayoutComponent } from './components/layout/layout.component';
-import { MenuListComponent } from './components/menu-list/menu-list.component';
+import { MenuListComponent } from './menu-list/menu-list.component';
+import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent
+    component: MenuComponent
   },
   {
     path: ':type',

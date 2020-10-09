@@ -17,6 +17,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 import { ProductsService } from './core/services/products.service';
 
+
 // import { CoreModule } from '@core/core.module';
 
 @NgModule({
@@ -33,7 +34,7 @@ import { ProductsService } from './core/services/products.service';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    SweetAlert2Module.forRoot()
+    SweetAlert2Module.forRoot(),
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent],

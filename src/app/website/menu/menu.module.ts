@@ -2,20 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MenuRoutingModule } from './menu-routing.module';
-import { LayoutComponent } from './components/layout/layout.component';
-import { MenuListComponent } from './components/menu-list/menu-list.component';
-import { ProductComponent } from './components/product/product.component';
+import { MenuComponent } from './menu/menu.component';
+import { MenuListComponent } from './menu-list/menu-list.component';
+import { WebsiteModule } from '../../shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    LayoutComponent,
+    MenuComponent,
     MenuListComponent,
-    ProductComponent,
   ],
   imports: [
     CommonModule,
     MenuRoutingModule,
+    WebsiteModule
   ]
 })
 export class MenuModule { }

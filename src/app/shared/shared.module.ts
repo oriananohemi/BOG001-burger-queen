@@ -4,21 +4,22 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { WebsiteRoutingModule } from './website-routing.module';
-
 import { HeaderComponent } from './components/header/header.component';
-import { LayoutComponent } from './components/layout/layout.component';
+import { ProductComponent } from './components/product/product.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    LayoutComponent
+    ProductComponent
   ],
   imports: [
     CommonModule,
-    WebsiteRoutingModule,
     ReactiveFormsModule,
     RouterModule,
+  ],
+  exports: [
+    HeaderComponent,
+    ProductComponent
   ]
 })
 export class WebsiteModule { }
