@@ -2,10 +2,8 @@
 <h2 class="title">Pedido: {{ client }}</h2>
 
 <div class="menu-flex">
-  <div class="menu" *ngFor="let item of menu">
-    <a [routerLink]="['/menu', item.title]">
-      <img class="responsive-image" [src]=item.img [alt]=item.title >
-      <h2 class="menu-title">{{ item.title }}</h2>
-    </a>
+  <div class="menu" *ngFor="let item of menu" [routerLink]="['/menu', item.title]">
+    <img class="responsive-image" [src]=item.img [alt]=item.title >
+    <h2 class="menu-title">{{ item.title }}</h2>
   </div>
 </div>
