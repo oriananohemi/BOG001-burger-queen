@@ -1,0 +1,8 @@
+<div *ngIf="product">
+  <div class="product">
+    <img class="responsive-image" [src]="product.image" [alt]="product.title">
+    <p class="product__description">{{ product.title }}</p>
+    <span class="product__description">{{ product.price }}</span>
+  </div>
+  <button class="button-long">Agregar</button>
+</div>
