@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MenuRoutingModule } from './menu-routing.module';
 import { MenuComponent } from './menu/menu.component';
 import { MenuListComponent } from './menu-list/menu-list.component';
-import { WebsiteModule } from '../../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -15,7 +15,7 @@ import { WebsiteModule } from '../../shared/shared.module';
   imports: [
     CommonModule,
     MenuRoutingModule,
-    WebsiteModule
+    SharedModule
   ]
 })
 export class MenuModule { }

@@ -22,4 +22,4 @@ import { ProductComponent } from './components/product/product.component';
     ProductComponent
   ]
 })
-export class WebsiteModule { }
+export class SharedModule { }
