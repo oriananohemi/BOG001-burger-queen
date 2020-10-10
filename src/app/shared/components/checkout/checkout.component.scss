@@ -8,3 +8,16 @@
   bottom: 0;
   width: 100%;
 }
+
+.checkout__productList {
+  background-color: var(--black);
+  color: var(--primary);
+  position: fixed;
+  top: 100px;
+  min-height: 90vh;
+  width: 90%;
+}
+
+.hiden {
+  display: none;
+}
