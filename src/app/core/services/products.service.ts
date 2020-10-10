@@ -11,7 +11,7 @@ export class ProductsService {
     {
       id: '1',
       image: 'assets/images/cafe.jpg',
-      title: 'Cafe',
+      title: 'Cafe 2',
       price: 10,
       description: 'bla bla bla',
       amount: 0
