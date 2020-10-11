@@ -1,7 +1,7 @@
 <div *ngIf="product">
   <div class="product">
-    <img class="responsive-image" [src]="product.image" [alt]="product.title">
-    <p class="product__description">{{ product.title }}</p>
+    <img class="responsive-image" [src]="product.image" [alt]="product.name">
+    <p class="product__description">{{ product.name }}</p>
     <p>{{ product.description }}</p>
     <span class="product__description">{{ product.price }}</span>
     <button class="button-long" (click)="addCart(product)">Agregar</button>

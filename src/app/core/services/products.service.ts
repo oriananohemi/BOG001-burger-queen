@@ -1,31 +1,22 @@
 import { Injectable } from '@angular/core';
 
-import { Product } from '../definitions/product.model';
-
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  products: Product[] = [
-    {
-      id: '1',
-      image: 'assets/images/cafe.jpg',
-      title: 'Cafe 2',
-      price: 10,
-      description: 'bla bla bla',
-      amount: 0
-    }
-  ];
-
+  items: Observable<any[]>;
+  constructor(firestore: AngularFirestore) {
+    this.items = firestore.collection('items').valueChanges();
+  }
 
   getAllProducts() {
-    return this.products;
+    return this.items;
   }
 
-  getProduct(id: string) {
-    return this.products.find(item => id === item.id);
-  }
-
-  constructor() { }
+  // getProduct(id: string) {
+  //   return this.products.find(item => id === item.id);
+  // }
 }
