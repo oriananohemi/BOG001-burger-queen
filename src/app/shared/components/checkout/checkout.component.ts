@@ -33,7 +33,11 @@ export class CheckoutComponent implements OnInit {
 
   showCheckout() {
     this.status = 'show';
-    console.log(this.products$)
+    console.log(this.products$);
+  }
+
+  hideCheckout() {
+    this.status = '';
   }
 
 }

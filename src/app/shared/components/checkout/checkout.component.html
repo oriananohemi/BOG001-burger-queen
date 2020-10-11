@@ -1,6 +1,7 @@
 <section *ngIf="status === 'show'; else sectionMobile" class="checkout__productList">
   <div *ngIf="(products$ | async).length; else elseSection">
-    <h2 class="title">{{ client }}</h2>
+    <span (click)="hideCheckout()">X</span>
+    <h2 class="title">Pedido: {{ client }}</h2>
     <div *ngFor="let product of products$ | async">
       <app-product [product]="product">
       </app-product>
