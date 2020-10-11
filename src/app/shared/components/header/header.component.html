@@ -10,7 +10,12 @@
         </a>
       </li>
       <li>
-        <a class="header__link">Mesero</a>
+        <div *ngIf="mesero; else signUp">
+          <h3>{{ mesero }}</h3>
+        </div>
+        <ng-template #signUp>
+          <a routerLink="/signup" class="header__link">Mesero</a>
+        </ng-template>
       </li>
     </ul>
   </nav>

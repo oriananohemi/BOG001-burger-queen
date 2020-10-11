@@ -11,4 +11,6 @@ export class HeaderComponent {
   constructor(public readonly router: Router) { }
 
   logo = 'assets/images/brandLetter.png';
+
+  mesero = localStorage.getItem('waiter');
 }
