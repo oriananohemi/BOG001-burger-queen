@@ -1,10 +1,16 @@
 <section *ngIf="status === 'show'; else sectionMobile" class="checkout__productList">
   <div *ngIf="(products$ | async).length; else elseSection">
     <h2 class="title">{{ client }}</h2>
-    <div>
-      <app-product *ngFor="let product of products$ | async" [product]="product">
+    <div *ngFor="let product of products$ | async">
+      <app-product [product]="product">
       </app-product>
+      <div class="flex-container">
+        <span>-</span>
+        <span></span>
+        <span>+</span>
+      </div>
     </div>
+    <button class="button-long">Confirmar</button>
   </div>
   <ng-template #elseSection >
     <p>Aun no hay productos</p>
