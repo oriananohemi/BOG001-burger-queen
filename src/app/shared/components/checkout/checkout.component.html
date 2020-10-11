@@ -12,10 +12,12 @@
     </div>
     <button class="button-long">Confirmar</button>
   </div>
+
   <ng-template #elseSection >
     <p>Aun no hay productos</p>
   </ng-template>
 </section>
+
 <ng-template #sectionMobile>
   <section class="checkout flex-container">
     <h3>Total: {{ total$ | async }} </h3>

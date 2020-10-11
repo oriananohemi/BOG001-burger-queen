@@ -1,7 +1,7 @@
 .product {
   background-color: var(--black);
   border: 1px solid var(--primary);
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 10px;
   text-align: center;
   width: 60%;
@@ -9,4 +9,10 @@
 
 .product__description {
   margin: 10px 0;
+}
+
+@media (min-width: 700px) {
+  .product {
+    width: 250px;
+  }
 }
