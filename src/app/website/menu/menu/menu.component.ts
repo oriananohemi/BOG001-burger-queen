@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
+import { ProductsService } from '../../../core/services/products.service';
+import { Observable } from 'rxjs';
+
+import { Product } from '../../../core/definitions/product.model';
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -6,23 +12,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  menu = [
-    {
-      img: 'assets/images/cafeAmericano.jpg',
-      title: 'Desayuno',
-    },
-    {
-      img: 'assets/images/cafeAmericano.jpg',
-      title: 'Comida',
-    },
-  ];
+  menu: Observable<Product[]>;
 
   client = localStorage.getItem('client');
 
-  constructor() { }
+  constructor(private productsService: ProductsService) { }
 
 
   ngOnInit(): void {
+    this.menu = this.productsService.getMenuType();
   }
 
 }

@@ -8,12 +8,18 @@ import { Observable } from 'rxjs';
 export class ProductsService {
 
   items: Observable<any[]>;
+  menu: Observable<any[]>;
   constructor(firestore: AngularFirestore) {
     this.items = firestore.collection('items').valueChanges();
+    this.menu = firestore.collection('menu').valueChanges();
   }
 
   getAllProducts() {
     return this.items;
+  }
+
+  getMenuType() {
+    return this.menu;
   }
 
   // getProduct(id: string) {
