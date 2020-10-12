@@ -3,8 +3,8 @@
     <span (click)="hideCheckout()">X</span>
     <h2 class="title">Pedido: {{ client }}</h2>
     <div *ngFor="let product of products$ | async">
-      <app-product [product]="product">
-      </app-product>
+      <!-- <app-product [product]="product"> -->
+      <!-- </app-product> -->
       <div class="flex-container">
         <span>-</span>
         <span>{{product.amount}}</span>
