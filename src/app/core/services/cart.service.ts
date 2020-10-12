@@ -26,4 +26,18 @@ export class CartService {
     }
     this.cart.next(this.products);
   }
+
+  changeAmount(product: Product): void {
+    if (product.amount > 1) {
+      product.amount--;
+      this.cart.next(this.products);
+    } else {
+      this.removeProduct(product);
+    }
+  }
+
+  removeProduct(oldProduct: Product): void {
+    this.products = this.products.filter(product => product.id !== oldProduct.id);
+    this.cart.next(this.products);
+  }
 }
