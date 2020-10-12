@@ -3,6 +3,8 @@ import { ProductsService } from '../../../core/services/products.service';
 import { Observable } from 'rxjs';
 
 import { Product } from '../../../core/definitions/product.model';
+import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-menu-list',
@@ -13,9 +15,13 @@ export class MenuListComponent implements OnInit {
 
   products: Observable<Product[]>;
 
-  constructor(private productsService: ProductsService) {}
+  constructor(private productsService: ProductsService, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.products = this.productsService.getAllProducts();
+    const type = this.activatedRoute.snapshot.paramMap.get('type');
+    this.products = this.productsService.getAllProducts()
+    .pipe(
+      map((products: Product[]) => products.filter((product) => product.menu === type))
+    );
   }
 }

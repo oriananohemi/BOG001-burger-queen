@@ -18,7 +18,7 @@ export class LayoutComponent implements OnInit {
       localStorage.setItem('client', this.nameClient);
       this.router.navigate(['menu']);
     } else {
-      console.log('esta vacio');
+      console.warn('esta vacio');
     }
   }
 }

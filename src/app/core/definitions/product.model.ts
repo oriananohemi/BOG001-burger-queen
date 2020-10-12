@@ -5,6 +5,7 @@ export interface Product {
   price: number;
   description: string;
   amount: number;
+  menu: string;
 }
 
 // export enum MenuType {
