@@ -2,7 +2,7 @@
 <h2 class="title">Pedido: {{ client }}</h2>
 
 <div class="menu-flex">
-  <div class="menu" *ngFor="let item of (menu | async)" [routerLink]="['/menu', item.title]">
+  <div class="menu" *ngFor="let item of (menu | async)" [routerLink]="['/menu', item.type]">
     <img class="responsive-image" [src]=item.image [alt]=item.type >
     <h2 class="menu-title">{{ item.type }}</h2>
   </div>

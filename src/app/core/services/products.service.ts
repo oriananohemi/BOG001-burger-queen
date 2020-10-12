@@ -2,23 +2,24 @@ import { Injectable } from '@angular/core';
 
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { Menu, Product } from '../definitions/product.model';
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  items: Observable<any[]>;
-  menu: Observable<any[]>;
+  items: Observable<Product[]>;
+  menu: Observable<Menu[]>;
   constructor(firestore: AngularFirestore) {
-    this.items = firestore.collection('items').valueChanges();
-    this.menu = firestore.collection('menu').valueChanges();
+    this.items = firestore.collection('items').valueChanges() as Observable<Product[]>;
+    this.menu = firestore.collection<Menu>('menu').valueChanges();
   }
 
-  getAllProducts() {
+  getAllProducts(): Observable<Product[]>  {
     return this.items;
   }
 
-  getMenuType() {
+  getMenuType(): Observable<Menu[]> {
     return this.menu;
   }
 
