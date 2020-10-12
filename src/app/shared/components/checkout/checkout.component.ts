@@ -24,7 +24,11 @@ export class CheckoutComponent implements OnInit {
     this.products$ = this.cartService.cart$;
     this.total$ = this.products$
     .pipe(
-      map((products: Product[]) => products.reduce((acc: number, { price }: Product) => acc + price, 0))
+      map((products: Product[]) => products.reduce((acc: number, { amount, price }: Product) => {
+        console.log(amount)
+        return acc + (amount * price)
+      }, 0
+      ))
     );
    }
 

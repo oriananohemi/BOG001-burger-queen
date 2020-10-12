@@ -16,8 +16,14 @@ export class CartService {
   constructor() { }
 
 
-  addCart(product: Product): void {
-    this.products = [...this.products, product];
+  addCart(newProduct: Product): void {
+    const productIndex = this.products.findIndex(product => product.id === newProduct.id);
+    if (productIndex !== -1) {
+      this.products[productIndex].amount++;
+    } else {
+      newProduct.amount = 1;
+      this.products = [...this.products, newProduct];
+    }
     this.cart.next(this.products);
   }
 }
