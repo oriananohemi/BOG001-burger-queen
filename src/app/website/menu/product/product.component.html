@@ -15,9 +15,12 @@
 
 <div *ngIf="status === 'show'" class="modal">
   <span (click)="hideOptions()">x</span>
-  <ul class="modal-body">
+  <ul>
     <li *ngFor="let option of product.options">
-      <h3>{{ option }}</h3>
+      <label>
+        <input formControlName="product" type="radio" value="{{option}}" name="product" (change)="optionProduct($event)">
+      </label>
     </li>
   </ul>
+  <button class="button-long" (click)="addCart()">Agregar</button>
 </div>

@@ -1,0 +1,12 @@
+<article class="flex-container product-container">
+  <div class="half-left">
+    <img class="responsive-image" [src]="product.image" [alt]="product.name">
+    <h2>{{ product.name }}</h2>
+  </div>
+  <div class="flex-container half-right">
+      <span (click)="changeAmount()">-</span>
+      <span>{{product.amount}}</span>
+      <span (click)="addCard()">+</span>
+    <span (click)="removeProduct()">Borrar</span>
+  </div>
+</article>

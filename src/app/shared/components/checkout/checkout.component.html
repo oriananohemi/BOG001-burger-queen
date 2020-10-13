@@ -4,17 +4,12 @@
       <span (click)="hideCheckout()">X</span>
       <h2 class="title">Pedido: {{ client }}</h2>
       <div *ngFor="let product of products$ | async">
-        <!-- <app-product [product]="product"> -->
-        <!-- </app-product> -->
-        <div class="flex-container">
-          <span>-</span>
-          <span>{{product.amount}}</span>
-          <span>+</span>
-        </div>
+        <app-product-checkout [product]="product">
+        </app-product-checkout>
       </div>
       <button class="button-long">Confirmar</button>
     </div>
-  
+
     <ng-template #elseSection >
       <p>Aun no hay productos</p>
     </ng-template>

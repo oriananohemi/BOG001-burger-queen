@@ -52,15 +52,12 @@ li {
   max-width: 100%;
 }
 
-.title {
-  text-align: center;
-}
-
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),
     url("assets/images/fondoMobile.jpeg");
   background-position: top;
   color: var(--primary);
+  text-align: center;
   font-size: 18px;
 }
 

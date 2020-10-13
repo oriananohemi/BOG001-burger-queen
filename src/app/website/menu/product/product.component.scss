@@ -3,11 +3,21 @@
   border: 1px solid var(--primary);
   margin: 20px auto;
   padding: 10px;
-  text-align: center;
   width: 60%;
   &__description {
     margin: 10px 0;
   }
+}
+
+.modal {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  height: 50%;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 50%;
 }
 
 @media (min-width: 700px) {
