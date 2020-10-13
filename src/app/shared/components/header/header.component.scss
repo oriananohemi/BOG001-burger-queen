@@ -2,8 +2,7 @@
   border-bottom: 1px solid var(--primary);
   padding: 20px 25px;
   margin-bottom: 50px;
-}
-
-.header__brand {
-  width: 180px;
+  &__brand {
+    width: 180px;
+  }
 }

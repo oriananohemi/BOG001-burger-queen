@@ -5,10 +5,9 @@
   padding: 10px;
   text-align: center;
   width: 60%;
-}
-
-.product__description {
-  margin: 10px 0;
+  &__description {
+    margin: 10px 0;
+  }
 }
 
 @media (min-width: 700px) {

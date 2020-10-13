@@ -11,12 +11,11 @@
 @media (min-width: 700px) {
   .menu {
     width: 40%;
-  }
-
-  .menu-flex {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+    &-flex {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
