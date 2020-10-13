@@ -4,7 +4,7 @@
   font-size: 20px;
   min-height: 50px;
   padding: 0 20px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   &__productList {
@@ -19,4 +19,11 @@
 
 .hiden {
   display: none;
+}
+
+@media (min-width: 1020px) {
+  .checkout__productList {
+    right: 0;
+    width: 40%;
+  }
 }

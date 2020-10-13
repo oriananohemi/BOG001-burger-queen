@@ -28,7 +28,7 @@ export class ProductComponent implements OnInit {
   hideOptions() {
     this.status = '';
   }
-  // addCart() {
-  //   this.cartService.addCart(this.product);
-  // }
+  addCart() {
+    this.cartService.addCart(this.product);
+  }
 }

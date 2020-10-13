@@ -43,4 +43,11 @@ export class CheckoutComponent implements OnInit {
     this.status = '';
   }
 
+  onResize(event) {
+    const resolution = event.target.innerWidth;
+    if (resolution >= 1020) {
+      this.status = 'show';
+    }
+  }
+
 }

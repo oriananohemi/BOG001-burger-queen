@@ -1,23 +1,25 @@
-<section *ngIf="status === 'show'; else sectionMobile" class="checkout__productList">
-  <div *ngIf="(products$ | async).length; else elseSection">
-    <span (click)="hideCheckout()">X</span>
-    <h2 class="title">Pedido: {{ client }}</h2>
-    <div *ngFor="let product of products$ | async">
-      <!-- <app-product [product]="product"> -->
-      <!-- </app-product> -->
-      <div class="flex-container">
-        <span>-</span>
-        <span>{{product.amount}}</span>
-        <span>+</span>
+<div (window:resize)="onResize($event)">
+  <section *ngIf="status === 'show'; else sectionMobile" class="checkout__productList">
+    <div *ngIf="(products$ | async).length; else elseSection">
+      <span (click)="hideCheckout()">X</span>
+      <h2 class="title">Pedido: {{ client }}</h2>
+      <div *ngFor="let product of products$ | async">
+        <!-- <app-product [product]="product"> -->
+        <!-- </app-product> -->
+        <div class="flex-container">
+          <span>-</span>
+          <span>{{product.amount}}</span>
+          <span>+</span>
+        </div>
       </div>
+      <button class="button-long">Confirmar</button>
     </div>
-    <button class="button-long">Confirmar</button>
-  </div>
-
-  <ng-template #elseSection >
-    <p>Aun no hay productos</p>
-  </ng-template>
-</section>
+  
+    <ng-template #elseSection >
+      <p>Aun no hay productos</p>
+    </ng-template>
+  </section>
+</div>
 
 <ng-template #sectionMobile>
   <section class="checkout flex-container">
