@@ -3,6 +3,7 @@
   background-color: var(--black);
   margin: 50px auto;
   text-align: center;
+  height: 400px;
   padding: 10px;
   width: 60%;
 }
@@ -22,6 +23,7 @@
 @media (min-width: 1020px) {
   .menu {
     margin: 50px 20px;
+    height: 600px;
     width: 30%;
   }
 }
