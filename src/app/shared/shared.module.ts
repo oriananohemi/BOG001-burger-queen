@@ -12,7 +12,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
   declarations: [
     HeaderComponent,
     CheckoutComponent,
-    SignUpComponent
+    SignUpComponent,
   ],
   imports: [
     CommonModule,

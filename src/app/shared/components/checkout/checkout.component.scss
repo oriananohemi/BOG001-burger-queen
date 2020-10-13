@@ -7,15 +7,14 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-
-.checkout__productList {
-  background-color: var(--black);
-  color: var(--primary);
-  position: fixed;
-  min-height: 100%;
-  top: 100px;
-  width: 90%;
+  &__productList {
+    background-color: var(--black);
+    color: var(--primary);
+    position: fixed;
+    min-height: 100%;
+    top: 100px;
+    width: 90%;
+  }
 }
 
 .hiden {

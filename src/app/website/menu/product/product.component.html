@@ -4,6 +4,15 @@
     <p class="product__description">{{ product.name }}</p>
     <p>{{ product.description }}</p>
     <span class="product__description">{{ product.price }}</span>
-    <button class="button-long" (click)="addCart(product)">Agregar</button>
+    <button class="button-long" (click)="showOptions()">Agregar</button>
   </div>
+</div>
+
+<div *ngIf="status === 'show'" class="modal">
+  <span (click)="hideOptions()">x</span>
+  <ul class="modal-body">
+    <li *ngFor="let option of product.options">
+      <h3>{{ option }}</h3>
+    </li>
+  </ul>
 </div>

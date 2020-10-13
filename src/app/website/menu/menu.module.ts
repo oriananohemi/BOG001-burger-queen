@@ -10,7 +10,7 @@ import { ProductComponent } from './product/product.component';
   declarations: [
     MenuComponent,
     MenuListComponent,
-    ProductComponent
+    ProductComponent,
   ],
   imports: [
     CommonModule,

@@ -12,6 +12,8 @@ export class ProductComponent implements OnInit {
   @Input() product: Product;
   @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
+  status = '';
+
   constructor(
     private cartService: CartService
   ) { }
@@ -19,7 +21,14 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addCart() {
-    this.cartService.addCart(this.product);
+  showOptions() {
+    this.status = 'show';
   }
+
+  hideOptions() {
+    this.status = '';
+  }
+  // addCart() {
+  //   this.cartService.addCart(this.product);
+  // }
 }
