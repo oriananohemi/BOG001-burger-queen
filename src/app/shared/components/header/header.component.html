@@ -12,9 +12,12 @@
       <li>
         <div *ngIf="mesero; else signUp">
           <h3>{{ mesero }}</h3>
+          <div>
+            <a href="">Cerrar Sesion</a>
+          </div>
         </div>
         <ng-template #signUp>
-          <a routerLink="/signup" class="header__link">Mesero</a>
+          <a routerLink="/inicio-sesion" class="header__link">Inicia Sesion</a>
         </ng-template>
       </li>
     </ul>

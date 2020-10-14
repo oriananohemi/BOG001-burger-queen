@@ -15,6 +15,7 @@ import { ProductCheckoutComponent } from './components/product-checkout/product-
     CheckoutComponent,
     SignUpComponent,
     ProductCheckoutComponent,
+    SignUpComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +24,8 @@ import { ProductCheckoutComponent } from './components/product-checkout/product-
   ],
   exports: [
     HeaderComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    SignUpComponent
   ]
 })
 export class SharedModule { }
