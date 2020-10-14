@@ -13,6 +13,7 @@ export class ProductComponent implements OnInit {
   @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
   status = '';
+  option = '';
 
   constructor(
     private cartService: CartService
@@ -28,10 +29,13 @@ export class ProductComponent implements OnInit {
   hideOptions() {
     this.status = '';
   }
-  addCart() {
-    this.cartService.addCart(this.product);
-  }
 
   optionProduct(option: string) {
+    this.option = option;
+  }
+
+  addCart() {
+    this.optionProduct(this.option);
+    this.cartService.addCart(this.product, this.option);
   }
 }

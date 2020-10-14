@@ -25,7 +25,6 @@ export class CheckoutComponent implements OnInit {
     this.total$ = this.products$
     .pipe(
       map((products: Product[]) => products.reduce((acc: number, { amount, price }: Product) => {
-        console.log(amount)
         return acc + (amount * price)
       }, 0
       ))
@@ -48,6 +47,10 @@ export class CheckoutComponent implements OnInit {
     if (resolution >= 1020) {
       this.status = 'show';
     }
+  }
+
+  save() {
+    
   }
 
 }

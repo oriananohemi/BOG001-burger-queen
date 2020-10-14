@@ -7,6 +7,7 @@ export interface Product {
   amount?: number;
   menu: string;
   options?: string[];
+  option?: string;
 }
 
 // export enum MenuType {

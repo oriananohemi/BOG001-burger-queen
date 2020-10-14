@@ -2,6 +2,11 @@
   <div class="half-left">
     <img class="responsive-image" [src]="product.image" [alt]="product.name">
     <h2>{{ product.name }}</h2>
+    <div *ngIf="product.options">
+      <h3 *ngFor="let option of product.options">
+        {{ option }}
+      </h3>
+    </div>
   </div>
   <div class="flex-container half-right">
       <span (click)="changeAmount()">-</span>

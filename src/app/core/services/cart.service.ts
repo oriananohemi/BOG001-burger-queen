@@ -16,12 +16,13 @@ export class CartService {
   constructor() { }
 
 
-  addCart(newProduct: Product): void {
+  addCart(newProduct: Product, option?: string): void {
     const productIndex = this.products.findIndex(product => product.id === newProduct.id);
     if (productIndex !== -1) {
       this.products[productIndex].amount++;
     } else {
       newProduct.amount = 1;
+      newProduct.option = option;
       this.products = [...this.products, newProduct];
     }
     this.cart.next(this.products);
