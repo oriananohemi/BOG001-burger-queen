@@ -19,12 +19,13 @@ import { ProductsService } from './core/services/products.service';
 import { LayoutComponent } from './layout/layout.component';
 
 import { SharedModule } from './shared/shared.module';
+import { OrdersComponent } from './kitchen/orders/orders.component';
 
 
 // import { CoreModule } from '@core/core.module';
 
 @NgModule({
-  declarations: [AppComponent, LayoutComponent],
+  declarations: [AppComponent, LayoutComponent, OrdersComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
