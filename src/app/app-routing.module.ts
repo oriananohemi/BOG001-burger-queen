@@ -12,7 +12,7 @@ const routes: Routes = [
         loadChildren: () => import('./website/home/home.module').then(m => m.HomeModule),
       },
       {
-        path: 'order',
+        path: 'mesas',
         loadChildren: () => import('./website/orderStart/order-start.module').then(m => m.OrderStartModule),
       },
       {
@@ -20,7 +20,7 @@ const routes: Routes = [
         loadChildren: () => import('./website/menu/menu.module').then(m => m.MenuModule),
       },
       {
-        path: 'kitchen',
+        path: 'cocina',
         loadChildren: () => import('./website/kitchen/kitchen.module').then(m => m.KitchenModule),
       }
     ]

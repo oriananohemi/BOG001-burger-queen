@@ -1,3 +1,9 @@
-<div>
-  
+<div class="brand">
+  <img class="responsive-image" [src]="logo" alt="" />
 </div>
+<section class="area-flex">
+  <article *ngFor="let area of areas" class="area" [routerLink]="area.title">
+    <h2>{{ area.title | titlecase }}</h2>
+    <img class="responsive-image" [src]="area.image" alt="Cocina">
+  </article>
+</section>

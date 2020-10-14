@@ -4,7 +4,7 @@
       <li>
         <a routerLink="pedidos" class="header__link">Pedidos</a>
       </li>
-      <li class="header__brand" *ngIf="router.url !== '/'">
+      <li class="header__brand" *ngIf="router.url !== '/' && router.url !== '/mesas'">
         <a routerLink="/">
           <img class="responsive-image" [src]="logo" alt="">
         </a>
