@@ -9,15 +9,15 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('./waiter/home/home.module').then(m => m.HomeModule),
+        loadChildren: () => import('./website/home/home.module').then(m => m.HomeModule),
       },
       {
         path: 'menu',
-        loadChildren: () => import('./waiter/menu/menu.module').then(m => m.MenuModule),
+        loadChildren: () => import('./website/menu/menu.module').then(m => m.MenuModule),
       },
       {
         path: 'kitchen',
-        loadChildren: () => import('./kitchen/kitchen.module').then(m => m.KitchenModule),
+        loadChildren: () => import('./website/kitchen/kitchen.module').then(m => m.KitchenModule),
       }
     ]
   }
