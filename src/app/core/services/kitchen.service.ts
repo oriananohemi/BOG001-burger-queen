@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { Order } from '../definitions/order.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class KitchenService {
-  orders: Observable<Product[]>;
+  orders: Observable<Order[]>;
 
   constructor(firestore: AngularFirestore) {
-    this.orders = firestore.collection('pedidos').valueChanges() as Observable<Product[]>;
+    this.orders = firestore.collection('pedidos').valueChanges() as Observable<Order[]>;
   }
 
-  getAllOrders(): Observable<Product[]>  {
+  getAllOrders(): Observable<Order[]>  {
     return this.orders;
   }
 }
