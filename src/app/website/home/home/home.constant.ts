@@ -5,7 +5,7 @@ export const areas = [
   },
   {
     title: 'mesas',
-    image: 'assets/images/mesa.jpeg',
+    image: 'assets/images/meseros2.jpg',
   },
   // {
   //   title: 'Autoservicio',

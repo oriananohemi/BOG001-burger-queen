@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { KitchenService }from '../../../core/services/kitchen.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Order } from 'src/app/core/definitions/order.model';
 
 @Component({
   selector: 'app-kitchen',
@@ -9,7 +10,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./kitchen.component.scss']
 })
 export class KitchenComponent implements OnInit {
-  orders: Observable<Product[]>;
+  orders: Observable<Order[]>;
 
   constructor(private kitchenService: KitchenService) { }
 
