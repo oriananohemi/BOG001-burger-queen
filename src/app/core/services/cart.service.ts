@@ -12,6 +12,8 @@ export class CartService {
 
   private cart = new BehaviorSubject<Product[]>([]);
   cart$: Observable<Product[]> = this.cart.asObservable();
+  client = localStorage.getItem('client');
+  waiter = localStorage.getItem('waiter');
 
   constructor() { }
 
@@ -22,7 +24,7 @@ export class CartService {
       this.products[productIndex].amount++;
     } else {
       newProduct.amount = 1;
-      newProduct.option = option;
+      newProduct.option = option ? option : '';
       this.products = [...this.products, newProduct];
     }
     this.cart.next(this.products);
@@ -40,5 +42,9 @@ export class CartService {
   removeProduct(oldProduct: Product): void {
     this.products = this.products.filter(product => product.id !== oldProduct.id);
     this.cart.next(this.products);
+  }
+
+  addOrder() {
+    console.log(this.products);
   }
 }

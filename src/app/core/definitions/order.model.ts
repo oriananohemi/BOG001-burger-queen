@@ -1,14 +1,15 @@
-export type ProductsOrder = {
+export interface ProductsOrder {
   name: string;
   amount: number;
-  option: string
+  option?: string;
 }
 
 export interface Order {
-  id: string;
+  id?: string;
   name: string;
   waiter: string;
-  observations: string;
+  observations?: string;
   status: string;
   products: ProductsOrder[];
+  total: number;
 }

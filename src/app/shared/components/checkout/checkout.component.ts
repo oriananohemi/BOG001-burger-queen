@@ -16,16 +16,17 @@ export class CheckoutComponent implements OnInit {
   total$: Observable<number>;
   products$: Observable<Product[]>;
   status = '';
-  client = localStorage.getItem('client');
+  client: string;
 
   constructor(
     private cartService: CartService
   ) {
+    this.client = this.cartService.client;
     this.products$ = this.cartService.cart$;
     this.total$ = this.products$
     .pipe(
       map((products: Product[]) => products.reduce((acc: number, { amount, price }: Product) => {
-        return acc + (amount * price)
+        return acc + (amount * price);
       }, 0
       ))
     );
@@ -50,7 +51,7 @@ export class CheckoutComponent implements OnInit {
   }
 
   save() {
-    
+    this.cartService.addOrder();
   }
 
 }

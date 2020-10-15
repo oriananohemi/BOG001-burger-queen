@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../../core/services/products.service';
 import { Observable } from 'rxjs';
 
-import { Menu, MenuType, Product } from '../../../core/definitions/product.model';
+import { Menu } from '../../../core/definitions/product.model';
 
 @Component({
   selector: 'app-menu',
@@ -14,9 +14,11 @@ export class MenuComponent implements OnInit {
 
   menu: Observable<Menu[]>;
 
-  client = localStorage.getItem('client');
+  client: string;
 
-  constructor(private productsService: ProductsService) { }
+  constructor(private productsService: ProductsService) {
+    this.client = this.productsService.client;
+  }
 
 
   ngOnInit(): void {

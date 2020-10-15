@@ -17,8 +17,9 @@
   <span (click)="hideOptions()">x</span>
   <ul>
     <li *ngFor="let option of product.options">
-      <label for={{option}}>{{ option }}</label>
-      <input type="radio" value="{{option}}" name="productOptions" (change)="optionProduct($event.target.value)" id={{option}}>
+      <label [for]="option">{{ option }}
+        <input type="radio" [value]="option" name="productOptions" (change)="setOption(option)">
+      </label>
     </li>
   </ul>
   <button class="button-long" (click)="addCart()">Agregar</button>

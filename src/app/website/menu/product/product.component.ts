@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../../../core/definitions/product.model';
 
 import { CartService } from '../../../core/services/cart.service';
@@ -10,7 +10,6 @@ import { CartService } from '../../../core/services/cart.service';
 })
 export class ProductComponent implements OnInit {
   @Input() product: Product;
-  @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
   status = '';
   option = '';
@@ -30,12 +29,11 @@ export class ProductComponent implements OnInit {
     this.status = '';
   }
 
-  optionProduct(option: string) {
+  setOption(option: string) {
     this.option = option;
   }
 
   addCart() {
-    this.optionProduct(this.option);
     this.cartService.addCart(this.product, this.option);
   }
 }
