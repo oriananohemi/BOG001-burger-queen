@@ -1,12 +1,15 @@
 <div (window:resize)="onResize($event)">
   <section *ngIf="status === 'show'; else sectionMobile" class="checkout__productList">
     <div *ngIf="(products$ | async).length; else elseSection">
-      <span (click)="hideCheckout()">X</span>
-      <h2 class="title">Pedido: {{ client }}</h2>
+      <div class="flex-container checkout-header">
+        <h2 class="title">Pedido: {{ client }}</h2>
+        <span (click)="hideCheckout()">X</span>
+      </div>
       <div *ngFor="let product of products$ | async">
         <app-product-checkout [product]="product">
         </app-product-checkout>
       </div>
+      <h3 class="checkout__total">Total: {{ total$ | async }} </h3>
       <button class="button-long" (click)="save()">Confirmar</button>
     </div>
 

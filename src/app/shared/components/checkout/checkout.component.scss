@@ -11,9 +11,16 @@
     background-color: var(--black);
     color: var(--primary);
     position: fixed;
-    min-height: 100%;
-    bottom: 0;
+    top: 0;
     width: 100%;
+  }
+  &-header {
+    padding: 10px 20px;
+  }
+  &__total {
+    font-size: 25px;
+    text-align: left;
+    padding: 10px 20px;
   }
 }
 
