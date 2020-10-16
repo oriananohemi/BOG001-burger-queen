@@ -25,3 +25,12 @@
     <span (click)="showCheckout()">+</span>
   </section>
 </ng-template>
+
+<div *ngIf="request ==='sucess'; else error" class="product__list">
+  <h3>Pedido: {{ client }} enviado </h3>
+  <button (click)="confirm()">OK</button>
+</div>
+
+<ng-template #error>
+  <h3>Error al realizar el pedido, intente de nuevo</h3>
+</ng-template>

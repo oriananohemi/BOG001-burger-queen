@@ -6,6 +6,8 @@ export enum OrderStatus {
   delivered = 'entregado'
 }
 
+// export type OrderStatus = 'preparando' | 'para entregar' | 'entregado';
+
 export interface Order {
   id?: string;
   name: string;

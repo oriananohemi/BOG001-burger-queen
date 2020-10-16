@@ -5,6 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Order, OrderStatus } from '../definitions/order.model';
 
+
 import { Product } from '../definitions/product.model';
 
 @Injectable({
@@ -24,6 +25,7 @@ export class CartService {
 
   client = localStorage.getItem('client');
   waiter = localStorage.getItem('waiter');
+  request = '';
 
   constructor(private afs: AngularFirestore) {
     this.ordersCollection = this.afs.collection<Order>('pedidos');
@@ -67,6 +69,13 @@ export class CartService {
       productsArray: this.products,
       total: this.getTotal(this.products),
   };
-    this.ordersCollection.add(order);
+    this.ordersCollection.add(order)
+    .then(() => {
+      this.request = 'sucess';
+      localStorage.removeItem('client');
+    })
+    .catch(() => {
+      this.request = 'error';
+    });
   }
 }

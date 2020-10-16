@@ -5,6 +5,8 @@ import { CartService } from '../../../core/services/cart.service';
 import { Observable } from 'rxjs';
 import { Product } from 'src/app/core/definitions/product.model';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -16,13 +18,16 @@ export class CheckoutComponent implements OnInit {
   products$: Observable<Product[]>;
   status = '';
   client: string;
+  request: string;
 
   constructor(
-    private cartService: CartService
+    private cartService: CartService,
+    private router: Router
   ) {
     this.client = this.cartService.client;
     this.products$ = this.cartService.products$;
     this.total$ = this.cartService.total$;
+    this.request = this.cartService.request;
    }
 
   ngOnInit(): void {
@@ -47,4 +52,7 @@ export class CheckoutComponent implements OnInit {
     this.cartService.addOrder();
   }
 
+  confirm() {
+    this.router.navigate(['mesas']);
+  }
 }
