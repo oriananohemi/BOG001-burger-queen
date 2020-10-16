@@ -16,4 +16,8 @@ export class KitchenService {
   getAllOrders(): Observable<Order[]>  {
     return this.orders;
   }
+
+  toDeliver() {
+    
+  }
 }

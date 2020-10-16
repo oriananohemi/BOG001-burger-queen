@@ -1,1 +1,13 @@
-<p>orders works!</p>
+<div *ngIf="order" class="flex-container">
+  <h3>{{ order.name }}</h3>
+  <div *ngFor="let product of order.productsArray">
+    <article>
+      <img [src]="product.image" alt="">
+      <h4>{{ product.name }}</h4>
+      <h4>{{ product.amount }}</h4>
+      <h4>{{ product.option ? product.option : '' }}</h4>
+    </article>
+  </div>
+  <p>{{ order.observations ? order.observations : 'Sin Observaciones' }}</p>
+  <button (click)="toDeliver()">Entregar</button>
+</div>
