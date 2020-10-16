@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 import { BehaviorSubject, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { Order, OrderStatus } from '../definitions/order.model';
 
 import { Product } from '../definitions/product.model';
 
@@ -9,14 +12,26 @@ import { Product } from '../definitions/product.model';
 })
 export class CartService {
   private products: Product[] = [];
+  private productsSubject = new BehaviorSubject<Product[]>([]);
+  products$: Observable<Product[]> = this.productsSubject.asObservable();
 
-  private cart = new BehaviorSubject<Product[]>([]);
-  cart$: Observable<Product[]> = this.cart.asObservable();
+  private ordersCollection: AngularFirestoreCollection<Order>;
+
+  total$: Observable<number> = this.products$
+  .pipe(
+    map((products: Product[]) => this.getTotal(products))
+  );
+
   client = localStorage.getItem('client');
   waiter = localStorage.getItem('waiter');
 
-  constructor() { }
+  constructor(private afs: AngularFirestore) {
+    this.ordersCollection = this.afs.collection<Order>('pedidos');
+  }
 
+  getTotal(products: Product[]): number {
+    return products.reduce((acc: number, { amount, price }: Product) => acc + (amount * price), 0);
+  }
 
   addCart(newProduct: Product, option?: string): void {
     const productIndex = this.products.findIndex(product => product.id === newProduct.id);
@@ -27,13 +42,13 @@ export class CartService {
       newProduct.option = option ? option : '';
       this.products = [...this.products, newProduct];
     }
-    this.cart.next(this.products);
+    this.productsSubject.next(this.products);
   }
 
   changeAmount(product: Product): void {
     if (product.amount > 1) {
       product.amount--;
-      this.cart.next(this.products);
+      this.productsSubject.next(this.products);
     } else {
       this.removeProduct(product);
     }
@@ -41,10 +56,17 @@ export class CartService {
 
   removeProduct(oldProduct: Product): void {
     this.products = this.products.filter(product => product.id !== oldProduct.id);
-    this.cart.next(this.products);
+    this.productsSubject.next(this.products);
   }
 
   addOrder() {
-    console.log(this.products);
+    const order: Order = {
+      name: this.client,
+      waiter: this.waiter,
+      status: OrderStatus.preparing,
+      productsArray: this.products,
+      total: this.getTotal(this.products),
+  };
+    this.ordersCollection.add(order);
   }
 }

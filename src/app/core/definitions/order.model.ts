@@ -1,7 +1,9 @@
-export interface ProductsOrder {
-  name: string;
-  amount: number;
-  option?: string;
+import { Product } from './product.model';
+
+export enum OrderStatus {
+  preparing = 'preparando',
+  toDeliver = 'para entregar',
+  delivered = 'entregado'
 }
 
 export interface Order {
@@ -9,7 +11,7 @@ export interface Order {
   name: string;
   waiter: string;
   observations?: string;
-  status: string;
-  products: ProductsOrder[];
+  status: OrderStatus;
+  productsArray: Product[];
   total: number;
 }
