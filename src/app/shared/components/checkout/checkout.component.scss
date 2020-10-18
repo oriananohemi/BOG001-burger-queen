@@ -10,9 +10,7 @@
   &__productList {
     background-color: var(--black);
     color: var(--primary);
-    position: fixed;
-    top: 0;
-    overflow: scroll;
+    min-height: 100%;
     width: 100%;
   }
   &-header {
@@ -26,10 +24,17 @@
 }
 
 .message {
+  align-items: center;
   background-color: var(--black);
+  display: flex;
+  justify-content: center;
   position: fixed;
-  top: 50%;
-  width: 30%;
+  top: 20%;
+  left: 10%;
+  padding: 20px;
+  height: 50%;
+  width: 80%;
+  z-index: 5;
 }
 
 .hiden {

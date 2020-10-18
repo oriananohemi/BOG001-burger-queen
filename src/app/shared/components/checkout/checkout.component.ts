@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 
 import { CartService } from '../../../core/services/cart.service';
 
@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
-  styleUrls: ['./checkout.component.scss']
+  styleUrls: ['./checkout.component.scss'],
+  providers: [{provide: 'Window', useValue: window}]
 })
 export class CheckoutComponent implements OnInit {
 
@@ -22,37 +23,43 @@ export class CheckoutComponent implements OnInit {
 
   constructor(
     private cartService: CartService,
-    private router: Router
+    private router: Router,
+    @Inject('Window') private readonly window: Window
   ) {
     this.client = this.cartService.client;
     this.products$ = this.cartService.products$;
     this.total$ = this.cartService.total$;
-    this.request = this.cartService.request;
-   }
+    }
 
   ngOnInit(): void {
+    this.onResize(this.window);
   }
 
   showCheckout() {
     this.status = 'show';
   }
 
-  hideCheckout() {
+  hide() {
     this.status = '';
   }
 
   onResize(event) {
-    const resolution = event.target.innerWidth;
+    const resolution = event.innerWidth;
     if (resolution >= 1020) {
       this.status = 'show';
     }
   }
 
   save() {
-    this.cartService.addOrder();
+    this.cartService.addOrder()
+    .then(() => {
+      this.request = 'success';
+    })
+    .catch(() => this.request = 'error');
   }
 
   confirm() {
+    localStorage.removeItem('client');
     this.router.navigate(['mesas']);
   }
 }

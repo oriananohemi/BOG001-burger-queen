@@ -1,9 +1,9 @@
-<div (window:resize)="onResize($event)">
+<div (window:resize)="onResize($event.target)">
   <section *ngIf="status === 'show'; else sectionMobile" class="checkout__productList">
     <div *ngIf="(products$ | async).length; else elseSection">
       <div class="flex-container checkout-header">
         <h2 class="title">Pedido: {{ client }}</h2>
-        <span (click)="hideCheckout()">X</span>
+        <span (click)="hide()">X</span>
       </div>
       <div *ngFor="let product of products$ | async">
         <app-product-checkout [product]="product">
@@ -14,7 +14,7 @@
     </div>
 
     <ng-template #elseSection>
-      <span (click)="hideCheckout()">X</span>
+      <span (click)="hide()">X</span>
       <p>Aun no hay productos</p>
     </ng-template>
   </section>
@@ -27,23 +27,11 @@
   </section>
 </ng-template>
 
-<!-- <div [ngSwitch]="status" class="product__list">
-  <ng-template *ngSwitchCase="status === 'success'">
-    <h3>Pedido: {{ client }} enviado </h3>
-    <button (click)="confirm()">OK</button>
-  </ng-template>
-  <ng-template *ngSwitchCase="status === 'error'">
-    <h3>Error al realizar el pedido, intente de nuevo</h3>
-  </ng-template>
-</div> -->
-
-
-<div class="message">
-  <div>
-    <h3>Pedido: {{ client }} enviado </h3>
-    <button class="button-medium" (click)="confirm()">OK</button>
-  </div>
-  <div>
-    <h3>Error al realizar el pedido, intente de nuevo</h3>
-  </div>
+<div *ngIf="request === 'success'" class="message">
+  <h3>Pedido: {{ client }} enviado </h3>
+  <button class="button-medium" (click)="confirm()">OK</button>
+</div>
+<div *ngIf="request === 'error'" class="message">
+  <h3>Error al realizar el pedido, intente de nuevo</h3>
+  <button class="button-medium" (click)="showCheckout()">OK</button>
 </div>

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Order } from 'src/app/core/definitions/order.model';
-
+import { KitchenService } from '../../../core/services/kitchen.service';
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
@@ -9,13 +9,15 @@ import { Order } from 'src/app/core/definitions/order.model';
 export class OrderComponent implements OnInit {
   @Input() order: Order;
 
-  constructor() { }
+  constructor(
+    private kitchenService: KitchenService
+  ) { }
 
   ngOnInit(): void {
   }
 
   toDeliver() {
-    
+    this.kitchenService.toDeliver();
   }
 
 }

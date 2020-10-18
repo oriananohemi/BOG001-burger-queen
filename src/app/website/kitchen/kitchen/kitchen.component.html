@@ -1,5 +1,3 @@
 <h2>Cocina - Pedidos</h2>
-
-<section>
+<span>{{ date }}</span>
   <app-order *ngFor="let order of ( orders | async )" [order]="order"></app-order>
-</section>

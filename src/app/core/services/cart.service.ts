@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, DocumentReference } from '@angular/fire/firestore';
 
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -26,7 +26,6 @@ export class CartService {
 
   client = localStorage.getItem('client');
   waiter = localStorage.getItem('waiter');
-  request = '';
 
   constructor(private afs: AngularFirestore) {
     this.ordersCollection = this.afs.collection<Order>('pedidos');
@@ -62,7 +61,7 @@ export class CartService {
     this.productsSubject.next(this.products);
   }
 
-  addOrder() {
+  addOrder(): Promise<DocumentReference> {
     const order: Order = {
       name: this.client,
       waiter: this.waiter,
@@ -70,14 +69,7 @@ export class CartService {
       productsArray: this.products,
       total: this.getTotal(this.products),
       date: moment().format('MMMM Do YYYY, h:mm:ss a'),
-  };
-    this.ordersCollection.add(order)
-    .then(() => {
-      this.request = 'sucess';
-      localStorage.removeItem('client');
-    })
-    .catch(() => {
-      this.request = 'error';
-    });
+    };
+    return this.ordersCollection.add(order);
   }
 }

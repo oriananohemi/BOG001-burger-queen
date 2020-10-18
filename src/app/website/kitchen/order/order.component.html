@@ -1,13 +1,13 @@
-<div *ngIf="order" class="flex-container">
-  <h3>{{ order.name }}</h3>
-  <div *ngFor="let product of order.productsArray">
-    <article>
-      <img [src]="product.image" alt="">
-      <h4>{{ product.name }}</h4>
-      <h4>{{ product.amount }}</h4>
+<div *ngIf="order" class="order">
+  <h3>Cliente: {{ order.name }}</h3>
+  <div class="flex-container">
+    <article *ngFor="let product of order.productsArray">
+      <img class="responsive-image" [src]="product.image" alt="">
+      <h4>Producto: {{ product.name }}</h4>
+      <h4>Cantidad: {{ product.amount }}</h4>
       <h4>{{ product.option ? product.option : '' }}</h4>
     </article>
   </div>
-  <p>{{ order.observations ? order.observations : 'Sin Observaciones' }}</p>
-  <button (click)="toDeliver()">Entregar</button>
+  <p>{{ order.observations ? order.observations : '' }}</p>
 </div>
+<button class="button-medium" (click)="toDeliver()">Entregar</button>

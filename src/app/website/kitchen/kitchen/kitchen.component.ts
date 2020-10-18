@@ -11,6 +11,7 @@ import { Order } from 'src/app/core/definitions/order.model';
 })
 export class KitchenComponent implements OnInit {
   orders: Observable<Order[]>;
+  date = new Date().toLocaleString("en-US");
 
   constructor(private kitchenService: KitchenService) { }
 
