@@ -13,7 +13,8 @@
       <button class="button-long" (click)="save()">Confirmar</button>
     </div>
 
-    <ng-template #elseSection >
+    <ng-template #elseSection>
+      <span (click)="hideCheckout()">X</span>
       <p>Aun no hay productos</p>
     </ng-template>
   </section>
@@ -26,11 +27,23 @@
   </section>
 </ng-template>
 
-<div *ngIf="request ==='sucess'; else error" class="product__list">
-  <h3>Pedido: {{ client }} enviado </h3>
-  <button (click)="confirm()">OK</button>
-</div>
+<!-- <div [ngSwitch]="status" class="product__list">
+  <ng-template *ngSwitchCase="status === 'success'">
+    <h3>Pedido: {{ client }} enviado </h3>
+    <button (click)="confirm()">OK</button>
+  </ng-template>
+  <ng-template *ngSwitchCase="status === 'error'">
+    <h3>Error al realizar el pedido, intente de nuevo</h3>
+  </ng-template>
+</div> -->
 
-<ng-template #error>
-  <h3>Error al realizar el pedido, intente de nuevo</h3>
-</ng-template>
+
+<div class="message">
+  <div>
+    <h3>Pedido: {{ client }} enviado </h3>
+    <button class="button-medium" (click)="confirm()">OK</button>
+  </div>
+  <div>
+    <h3>Error al realizar el pedido, intente de nuevo</h3>
+  </div>
+</div>

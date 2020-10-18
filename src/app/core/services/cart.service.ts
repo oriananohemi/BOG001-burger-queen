@@ -5,6 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Order, OrderStatus } from '../definitions/order.model';
 
+import * as moment from 'moment';
 
 import { Product } from '../definitions/product.model';
 
@@ -68,6 +69,7 @@ export class CartService {
       status: OrderStatus.preparing,
       productsArray: this.products,
       total: this.getTotal(this.products),
+      date: moment().format('MMMM Do YYYY, h:mm:ss a'),
   };
     this.ordersCollection.add(order)
     .then(() => {

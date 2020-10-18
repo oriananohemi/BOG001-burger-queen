@@ -12,6 +12,7 @@
     color: var(--primary);
     position: fixed;
     top: 0;
+    overflow: scroll;
     width: 100%;
   }
   &-header {
@@ -22,6 +23,13 @@
     text-align: left;
     padding: 10px 20px;
   }
+}
+
+.message {
+  background-color: var(--black);
+  position: fixed;
+  top: 50%;
+  width: 30%;
 }
 
 .hiden {
