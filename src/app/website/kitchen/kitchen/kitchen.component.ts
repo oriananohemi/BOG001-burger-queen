@@ -10,16 +10,16 @@ import { Order } from 'src/app/core/definitions/order.model';
   styleUrls: ['./kitchen.component.scss']
 })
 export class KitchenComponent implements OnInit {
-  orders: Observable<Order[]>;
-  date: Observable<Date>;
+  orders$: Observable<Order[]>;
+  date$: Observable<Date>;
 
   constructor(private kitchenService: KitchenService) { }
 
   ngOnInit(): void {
-    this.orders = this.kitchenService.getAllOrders()
+    this.orders$ = this.kitchenService.getAllOrders()
     .pipe(
       map((orders) => orders.filter((order) => order.status === 'preparando'))
     );
-    this.date = this.kitchenService.getClock();
+    this.date$ = this.kitchenService.getClock();
   }
 }
