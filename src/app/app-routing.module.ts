@@ -25,7 +25,7 @@ const routes: Routes = [
       },
       {
         path: 'pedidos',
-        loadChildren: () => import('./website/pedidos/pedidos.module').then(m => m.PedidosModule),
+        loadChildren: () => import('./website/order-history/order-history.module').then(m => m.OrderHistoryModule),
       }
     ]
   }
