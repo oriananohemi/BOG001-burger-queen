@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { KitchenService } from '../../../core/services/kitchen.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Order } from 'src/app/core/definitions/order.model';
+import { Order, OrderStatus } from 'src/app/core/definitions/order.model';
 
 @Component({
   selector: 'app-kitchen',
@@ -18,7 +18,7 @@ export class KitchenComponent implements OnInit {
   ngOnInit(): void {
     this.orders$ = this.kitchenService.getAllOrders()
     .pipe(
-      map((orders) => orders.filter((order) => order.status === 'preparando'))
+      map((orders) => orders.filter((order) => order.status === OrderStatus.preparing))
     );
     this.date$ = this.kitchenService.getClock();
   }

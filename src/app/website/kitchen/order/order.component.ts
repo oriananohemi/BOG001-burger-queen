@@ -17,7 +17,6 @@ export class OrderComponent implements OnInit {
   }
 
   toDeliver(id: string) {
-    console.log(id)
     this.kitchenService.toDeliver(id);
   }
 

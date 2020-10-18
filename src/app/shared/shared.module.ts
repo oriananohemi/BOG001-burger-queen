@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ProductCheckoutComponent } from './components/product-checkout/product-checkout.component';
+import { OrderActiveComponent } from './components/order-active/order-active.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProductCheckoutComponent } from './components/product-checkout/product-
     CheckoutComponent,
     SignUpComponent,
     ProductCheckoutComponent,
-    SignUpComponent
+    SignUpComponent,
+    OrderActiveComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +27,8 @@ import { ProductCheckoutComponent } from './components/product-checkout/product-
   exports: [
     HeaderComponent,
     CheckoutComponent,
-    SignUpComponent
+    SignUpComponent,
+    OrderActiveComponent
   ]
 })
 export class SharedModule { }
