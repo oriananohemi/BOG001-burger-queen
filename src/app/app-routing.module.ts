@@ -22,6 +22,10 @@ const routes: Routes = [
       {
         path: 'cocina',
         loadChildren: () => import('./website/kitchen/kitchen.module').then(m => m.KitchenModule),
+      },
+      {
+        path: 'pedidos',
+        loadChildren: () => import('./website/pedidos/pedidos.module').then(m => m.PedidosModule),
       }
     ]
   }
