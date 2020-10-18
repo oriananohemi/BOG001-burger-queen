@@ -61,8 +61,10 @@ export class CartService {
     this.productsSubject.next(this.products);
   }
 
-  addOrder(): Promise<DocumentReference> {
+  addOrder(): Promise<void> {
+    const id = this.afs.createId();
     const order: Order = {
+      id,
       name: this.client,
       waiter: this.waiter,
       status: OrderStatus.preparing,
@@ -70,6 +72,6 @@ export class CartService {
       total: this.getTotal(this.products),
       date: moment().format('MMMM Do YYYY, h:mm:ss a'),
     };
-    return this.ordersCollection.add(order);
+    return this.ordersCollection.doc(id).set(order);
   }
 }

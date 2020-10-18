@@ -16,8 +16,9 @@ export class OrderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toDeliver() {
-    this.kitchenService.toDeliver();
+  toDeliver(id: string) {
+    console.log(id)
+    this.kitchenService.toDeliver(id);
   }
 
 }

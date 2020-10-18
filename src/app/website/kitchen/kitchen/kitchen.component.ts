@@ -11,7 +11,7 @@ import { Order } from 'src/app/core/definitions/order.model';
 })
 export class KitchenComponent implements OnInit {
   orders: Observable<Order[]>;
-  date = new Date().toLocaleString("en-US");
+  date: Observable<Date>;
 
   constructor(private kitchenService: KitchenService) { }
 
@@ -20,6 +20,6 @@ export class KitchenComponent implements OnInit {
     .pipe(
       map((orders) => orders.filter((order) => order.status === 'preparando'))
     );
+    this.date = this.kitchenService.getClock();
   }
-
 }
