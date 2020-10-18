@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private location: Location, readonly router: Router) { }
 
   ngOnInit(): void {
   }
 
+  goBack() {
+    this.location.back();
+  }
 }
