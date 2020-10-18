@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { KitchenService } from '../../../core/services/kitchen.service';
+import { KitchenService } from '../../../core/services/kitchen/kitchen.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Order, OrderStatus } from 'src/app/core/definitions/order.model';

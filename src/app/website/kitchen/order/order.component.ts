@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Order } from 'src/app/core/definitions/order.model';
-import { KitchenService } from '../../../core/services/kitchen.service';
+import { KitchenService } from '../../../core/services/kitchen/kitchen.service';
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',

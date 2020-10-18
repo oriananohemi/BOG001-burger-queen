@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '../../../core/services/products.service';
+import { ProductsService } from '../../../core/services/products/products.service';
 import { Observable } from 'rxjs';
 
 import { Product } from '../../../core/definitions/product.model';
 import { ActivatedRoute } from '@angular/router';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-menu-list',

@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, DocumentReference } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Order, OrderStatus } from '../definitions/order.model';
+import { Order, OrderStatus } from '../../definitions/order.model';
+import { Product } from '../../definitions/product.model';
 
 import * as moment from 'moment';
-
-import { Product } from '../definitions/product.model';
 
 @Injectable({
   providedIn: 'root'

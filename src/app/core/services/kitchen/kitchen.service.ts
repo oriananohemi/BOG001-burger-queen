@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, interval } from 'rxjs';
-import { Order, OrderStatus } from '../definitions/order.model';
+import { Order, OrderStatus } from '../../definitions/order.model';
 import { map, share } from 'rxjs/operators';
 
 @Injectable({
