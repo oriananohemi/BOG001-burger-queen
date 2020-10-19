@@ -6,8 +6,6 @@ import { map } from 'rxjs/operators';
 import { Order, OrderStatus } from '../../definitions/order.model';
 import { Product } from '../../definitions/product.model';
 
-import * as moment from 'moment';
-
 @Injectable({
   providedIn: 'root'
 })
@@ -69,7 +67,7 @@ export class CartService {
       status: OrderStatus.preparing,
       productsArray: this.products,
       total: this.getTotal(this.products),
-      date: moment().format('MMMM Do YYYY, h:mm:ss a'),
+      date: new Date(),
     };
     return this.ordersCollection.doc(id).set(order);
   }

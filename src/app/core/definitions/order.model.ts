@@ -16,5 +16,5 @@ export interface Order {
   status: OrderStatus;
   productsArray: Product[];
   total: number;
-  date: string;
+  date: Date;
 }
