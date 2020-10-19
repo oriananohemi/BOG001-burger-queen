@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 
 import { OrderStartRoutingModule } from './order-start-routing.module';
 import { LayoutComponent } from './layout/layout.component';
-
 @NgModule({
   declarations: [LayoutComponent],
   imports: [OrderStartRoutingModule, CommonModule, FormsModule],

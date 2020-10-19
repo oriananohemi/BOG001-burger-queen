@@ -34,6 +34,7 @@ export class ProductComponent implements OnInit {
   }
 
   addCart() {
+    console.log(this.option)
     this.cartService.addCart(this.product, this.option);
   }
 }

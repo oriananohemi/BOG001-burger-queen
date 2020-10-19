@@ -4,7 +4,7 @@
       <li>
         <a *ngIf="waiterName; else kitchenSchedule" routerLink="pedidos" class="header__link">Pedidos</a>
         <ng-template #kitchenSchedule>
-          <p>Hola</p>
+          <p>{{ schedule }}</p>
         </ng-template>
       </li>
       <li class="header__brand" *ngIf="router.url !== '/' && router.url !== '/mesas'">

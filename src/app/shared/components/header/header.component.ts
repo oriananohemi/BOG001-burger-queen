@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   waiterName = localStorage.getItem('waiter');
+  schedule = localStorage.getItem('kitchen');
   logo = 'assets/images/brandLetter.png';
 
   constructor(public readonly router: Router) { }

@@ -14,10 +14,9 @@ export class MenuComponent implements OnInit {
 
   menu: Observable<Menu[]>;
 
-  client: string;
+  client = localStorage.getItem('client');
 
   constructor(private productsService: ProductsService) {
-    this.client = this.productsService.client;
   }
 
 

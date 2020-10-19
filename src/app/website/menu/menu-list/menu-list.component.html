@@ -1,6 +1,5 @@
-<div class="flex-container">
-  <div class="products-container">
-    <app-product *ngFor="let product of (products$ | async)" [product]="product" class="product"></app-product>
-  </div>
-  <app-checkout></app-checkout>
+
+<div class="products-container">
+  <app-product *ngFor="let product of (products$ | async)" [product]="product" class="product"></app-product>
 </div>
+<app-checkout></app-checkout>

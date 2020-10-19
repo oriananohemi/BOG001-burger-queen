@@ -11,7 +11,6 @@ export class ProductsService {
 
   items: Observable<Product[]>;
   menu: Observable<Menu[]>;
-  client = localStorage.getItem('client');
   waiter = localStorage.getItem('waiter');
 
   constructor(firestore: AngularFirestore) {

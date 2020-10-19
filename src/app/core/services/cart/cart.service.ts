@@ -33,7 +33,7 @@ export class CartService {
   }
 
   addCart(newProduct: Product, option?: string): void {
-    const productIndex = this.products.findIndex(product => product.id === newProduct.id);
+    const productIndex = this.products.findIndex(product => product.id === newProduct.id || product.option === newProduct.option);
     if (productIndex !== -1) {
       this.products[productIndex].amount++;
     } else {
