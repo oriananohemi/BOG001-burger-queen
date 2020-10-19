@@ -8,6 +8,8 @@ import { Order, OrderStatus } from '../../definitions/order.model';
   providedIn: 'root'
 })
 export class OrderHistoryService {
+  waiterName = localStorage.getItem('waiter');
+
   orders$: Observable<Order[]>;
 
   constructor(private firestore: AngularFirestore) {
@@ -16,13 +18,13 @@ export class OrderHistoryService {
 
   getAllOrdersActive(): Observable<Order[]>  {
     return this.orders$.pipe(
-      map((orders) => orders.filter((order) => order.status === OrderStatus.toDeliver))
+      map((orders) => orders.filter((order) => order.status === OrderStatus.toDeliver && order.waiter === this.waiterName))
     );
   }
 
   getAllOrders(): Observable<Order[]>  {
     return this.orders$.pipe(
-      map((orders) => orders.filter((order) => order.status === OrderStatus.delivered))
+      map((orders) => orders.filter((order) => order.status === OrderStatus.delivered && order.waiter === this.waiterName))
     );
   }
 

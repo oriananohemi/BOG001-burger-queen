@@ -6,6 +6,7 @@ export interface Product {
   description?: string;
   amount?: number;
   menu: string;
+  submenu?: string;
   options?: string[];
   option?: string;
 }

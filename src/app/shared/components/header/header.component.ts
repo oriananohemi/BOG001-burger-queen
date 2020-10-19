@@ -7,10 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
-  constructor(public readonly router: Router) { }
-
+  waiterName = localStorage.getItem('waiter');
   logo = 'assets/images/brandLetter.png';
 
-  mesero = localStorage.getItem('waiter');
+  constructor(public readonly router: Router) { }
 }

@@ -21,7 +21,7 @@ export class MenuListComponent implements OnInit {
     const type = this.activatedRoute.snapshot.paramMap.get('type');
     this.products$ = this.productsService.getAllProducts()
     .pipe(
-      map((products: Product[]) => products.filter((product) => product.menu === type)),
+      map((products: Product[]) => products.filter((product) => product.menu === type && product.submenu !== 'extras')),
     );
   }
 }

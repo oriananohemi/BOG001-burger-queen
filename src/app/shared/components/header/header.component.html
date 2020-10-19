@@ -2,7 +2,10 @@
   <nav>
     <ul class="flex-container">
       <li>
-        <a routerLink="pedidos" class="header__link">Pedidos</a>
+        <a *ngIf="waiterName; else kitchenSchedule" routerLink="pedidos" class="header__link">Pedidos</a>
+        <ng-template #kitchenSchedule>
+          <p>Hola</p>
+        </ng-template>
       </li>
       <li class="header__brand" *ngIf="router.url !== '/' && router.url !== '/mesas'">
         <a routerLink="/">
@@ -10,8 +13,8 @@
         </a>
       </li>
       <li>
-        <div *ngIf="mesero; else signUp">
-          <h3>{{ mesero }}</h3>
+        <div *ngIf="waiterName; else signUp">
+          <h3>{{ waiterName }}</h3>
           <div>
             <a href="">Cerrar Sesion</a>
           </div>
