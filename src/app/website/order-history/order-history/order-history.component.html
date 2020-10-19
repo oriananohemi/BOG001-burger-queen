@@ -1,14 +1,17 @@
 <h2>Historial de Pedidos</h2>
 
 <h3>Pedidos Activos</h3>
-<ng-container *ngIf="(ordersActive$ | async)?.length; else noOrders">
-  <app-order-active *ngFor="let order of (ordersActive$ | async)" [order]="order">
-  </app-order-active>
-</ng-container>
+<div class="orders">
+  <ng-container *ngIf="(ordersActive$ | async)?.length; else noOrders">
+    <app-order-active *ngFor="let order of (ordersActive$ | async)" [order]="order">
+    </app-order-active>
+  </ng-container>
+</div>
 <ng-template #noOrders>
   <p>No hay ordenes pendientes</p>
 </ng-template>
 <h3>Pedidos Cerrados</h3>
-
-<!-- <app-order-active *ngFor="let order of (orders$ | async)" [order]="order">
-</app-order-active> -->
+<div class="orders">
+  <app-order-completed *ngFor="let order of (orders$ | async)" [order]="order">
+  </app-order-completed>
+</div>

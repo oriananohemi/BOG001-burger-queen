@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from "@angular/forms";
 
 import { MenuRoutingModule } from './menu-routing.module';
 import { MenuComponent } from './menu/menu.component';
@@ -15,7 +16,8 @@ import { ProductComponent } from './product/product.component';
   imports: [
     CommonModule,
     MenuRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class MenuModule { }

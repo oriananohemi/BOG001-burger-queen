@@ -4,23 +4,10 @@
     <p class="product__description">{{ product.name }}</p>
     <p>{{ product.description }}</p>
     <span class="product__description">{{ product.price }}</span>
-    <div *ngIf="product.options; else add">
-      <button class="button-long" (click)="showOptions()">Agregar</button>
-    </div>
-    <ng-template #add>
+    <select [(ngModel)]="option" (change)="setOption(option)">
+      <option value="" selected>Sabores</option>
+      <option *ngFor="let option of product.options" [value]="option">{{ option }}</option>
+    </select>
       <button class="button-long" (click)="addCart()">Agregar</button>
-    </ng-template>
   </div>
-</div>
-
-<div *ngIf="status === 'show'" class="modal">
-  <span (click)="hideOptions()">x</span>
-  <ul>
-    <li *ngFor="let option of product.options">
-      <label [for]="option">{{ option }}
-        <input type="radio" [value]="option" name="productOptions" (change)="setOption(option)">
-      </label>
-    </li>
-  </ul>
-  <button class="button-long" (click)="addCart()">Agregar</button>
 </div>
