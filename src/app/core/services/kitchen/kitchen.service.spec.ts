@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { firestore } from 'firebase';
 import { Observable, of } from 'rxjs';
 import { Order } from '../../definitions/order.model';
 
@@ -38,7 +37,7 @@ describe('KitchenService', () => {
   describe('Suite de prueba de la funcion getAllOrders', () => {
     it('Debe retornar el contenido de la variable', () => {
       const orders: Observable<Order[]> = of([]);
-      service.orders = orders;
+      service.orders$ = orders;
 
       const result = service.getAllOrders();
 

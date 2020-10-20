@@ -8,16 +8,16 @@ import { map, share } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class KitchenService {
-  orders: Observable<Order[]>;
+  orders$: Observable<Order[]>;
   clock: Observable<Date>;
 
   constructor(private firestore: AngularFirestore) {
-    this.orders = this.firestore.collection('pedidos').valueChanges() as Observable<Order[]>;
+    this.orders$ = this.firestore.collection('pedidos').valueChanges() as Observable<Order[]>;
     this.clock = interval(1000).pipe(map(() => new Date()), share());
   }
 
   getAllOrders(): Observable<Order[]>  {
-    return this.orders;
+    return this.orders$;
   }
 
   getClock(): Observable<Date> {

@@ -27,7 +27,7 @@ describe('CartService', () => {
           }
         }
       ]
-    }); 
+    });
 
     service = TestBed.inject(CartService);
   });

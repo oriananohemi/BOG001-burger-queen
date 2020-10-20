@@ -9,21 +9,21 @@ import { Menu, Product } from '../../definitions/product.model';
 })
 export class ProductsService {
 
-  items: Observable<Product[]>;
-  menu: Observable<Menu[]>;
+  items$: Observable<Product[]>;
+  menu$: Observable<Menu[]>;
   waiter = localStorage.getItem('waiter');
 
   constructor(firestore: AngularFirestore) {
-    this.items = firestore.collection('items').valueChanges() as Observable<Product[]>;
-    this.menu = firestore.collection<Menu>('menu').valueChanges();
+    this.items$ = firestore.collection('items').valueChanges() as Observable<Product[]>;
+    this.menu$ = firestore.collection<Menu>('menu').valueChanges();
   }
 
   getAllProducts(): Observable<Product[]>  {
-    return this.items;
+    return this.items$;
   }
 
   getMenuType(): Observable<Menu[]> {
-    return this.menu;
+    return this.menu$;
   }
 
   // getProduct(id: string) {
