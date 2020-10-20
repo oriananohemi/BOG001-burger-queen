@@ -13,7 +13,7 @@ export class KitchenService {
 
   constructor(private firestore: AngularFirestore) {
     this.orders = this.firestore.collection('pedidos').valueChanges() as Observable<Order[]>;
-    this.clock = interval(1000).pipe(map(tick => new Date()), share());
+    this.clock = interval(1000).pipe(map(() => new Date()), share());
   }
 
   getAllOrders(): Observable<Order[]>  {
@@ -24,7 +24,7 @@ export class KitchenService {
     return this.clock;
   }
 
-  toDeliver(id: string) {
+  toDeliver(id: string): void {
     this.firestore.doc<Order>(`pedidos/${id}`).update({status: OrderStatus.toDeliver });
   }
 }
