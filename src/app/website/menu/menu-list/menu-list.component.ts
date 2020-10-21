@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProductsService } from '../../../core/services/products/products.service';
 import { Observable } from 'rxjs';
 
@@ -12,8 +12,11 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./menu-list.component.scss']
 })
 export class MenuListComponent implements OnInit {
+  @Input() product: Product;
 
   products$: Observable<Product[]>;
+  cartService: any;
+  option = '';
 
   constructor(private productsService: ProductsService, private activatedRoute: ActivatedRoute) {}
 
@@ -23,5 +26,13 @@ export class MenuListComponent implements OnInit {
     .pipe(
       map((products: Product[]) => products.filter((product) => product.menu === type && product.submenu !== 'extras')),
     );
+  }
+
+  setOption(option: string) {
+    this.option = option;
+  }
+
+  addCart() {
+    this.cartService.addCart(this.product, this.option);
   }
 }

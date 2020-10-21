@@ -18,13 +18,13 @@ export class OrderHistoryService {
 
   getAllOrdersActive(): Observable<Order[]>  {
     return this.orders$.pipe(
-      map((orders) => orders.filter((order) => order.status === OrderStatus.toDeliver && order.waiter === this.waiterName))
+      map((orders) => orders.filter((order) => order.status === OrderStatus.toDeliver))
     );
   }
 
   getAllOrders(): Observable<Order[]>  {
     return this.orders$.pipe(
-      map((orders) => orders.filter((order) => order.status === OrderStatus.delivered && order.waiter === this.waiterName))
+      map((orders) => orders.filter((order) => order.status === OrderStatus.delivered))
     );
   }
 
