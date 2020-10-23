@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{Nobp:function(e,n,r){"use strict";r.d(n,"a",(function(){return a}));var a=function(e){return e.preparing="preparando",e.toDeliver="para entregar",e.delivered="entregado",e}({})}}]);
