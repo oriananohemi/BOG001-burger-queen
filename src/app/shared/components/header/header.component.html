@@ -16,11 +16,11 @@
         <div *ngIf="waiterName; else signUp">
           <h3>{{ waiterName }}</h3>
           <div>
-            <a href="">Cerrar Sesion</a>
+            <button (click)="logOut()">Cerrar Sesion</button>
           </div>
         </div>
         <ng-template #signUp>
-          <a routerLink="/inicio-sesion" class="header__link">Inicia Sesion</a>
+          <button (click)="logIn()"  class="header__link">Inicia Sesion</button>
         </ng-template>
       </li>
     </ul>

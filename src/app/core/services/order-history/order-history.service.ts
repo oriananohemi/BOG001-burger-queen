@@ -4,9 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Order, OrderStatus } from '../../definitions/order.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class OrderHistoryService {
   waiterName = localStorage.getItem('waiter');
 

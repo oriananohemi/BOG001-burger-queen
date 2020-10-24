@@ -6,9 +6,7 @@ import { map } from 'rxjs/operators';
 import { Order, OrderStatus } from '../../definitions/order.model';
 import { Product } from '../../definitions/product.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CartService {
   private products: Product[] = [];
   private productsSubject = new BehaviorSubject<Product[]>([]);

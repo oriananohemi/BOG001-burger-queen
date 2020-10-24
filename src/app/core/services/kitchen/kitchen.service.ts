@@ -4,9 +4,7 @@ import { Observable, interval } from 'rxjs';
 import { Order, OrderStatus } from '../../definitions/order.model';
 import { map, share } from 'rxjs/operators';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class KitchenService {
   orders$: Observable<Order[]>;
   clock: Observable<Date>;
