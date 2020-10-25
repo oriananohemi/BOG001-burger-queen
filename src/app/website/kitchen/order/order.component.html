@@ -1,6 +1,5 @@
 <div class="order">
   <h3>Cliente: {{ order?.name }}</h3>
-  <h3>{{ order.date }}</h3>
   <div class="flex-container">
     <article *ngFor="let product of order?.productsArray">
       <img class="responsive-image" [src]="product.image" alt="">

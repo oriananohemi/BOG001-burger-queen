@@ -1,5 +1,5 @@
-<h2>Cocina - Pedidos</h2>
-<span>{{ date$ | async }}</span>
+<h2 class="title">Cocina - Pedidos</h2>
+<span>{{ date$ | async | date:'medium' }}</span>
   <ng-container *ngIf="(orders$ | async)?.length; else noOrders">
     <app-order *ngFor="let order of ( orders$ | async )" [order]="order"></app-order>
   </ng-container>
