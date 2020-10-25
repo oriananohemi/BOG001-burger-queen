@@ -1,24 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-order-start',
   templateUrl: './order-start.component.html',
   styleUrls: ['./order-start.component.scss'],
 })
-export class OrderStartComponent implements OnInit {
+export class OrderStartComponent {
   logo = 'assets/images/brand.png';
-  nameClient = '';
 
-  constructor(private router: Router) {}
+  clientField: FormControl;
 
-  ngOnInit(): void {}
+  constructor(private router: Router) {
+    this.clientField = new FormControl('',[Validators.required]);
+  }
 
   clientSave() {
-    if (this.nameClient !== '') {
-      localStorage.setItem('client', this.nameClient);
+    if (this.clientField.valid) {
+      localStorage.setItem('client', this.clientField.value);
       this.router.navigate(['menu']);
-    } else {
-      console.warn('esta vacio');
     }
   }
 }

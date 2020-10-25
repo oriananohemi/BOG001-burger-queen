@@ -1,12 +1,17 @@
 <div class="brand">
-  <img class="responsive-image" [src]="logo" alt="logo" />
+  <a routerLink="">
+    <img class="responsive-image" [src]="logo" alt="logo" />
+  </a>
 </div>
 <div class="input__container flex-container">
   <input
-    class="input"
     type="text"
+    [formControl]="clientField"
+    class="input"
     placeholder="Nombre/Mesa"
-    [(ngModel)]="nameClient"
   />
-  <button class="button-medium" (click)="clientSave()">Continuar</button>
+  <button class="button-medium" [disabled]="clientField.invalid" (click)="clientSave()">Continuar</button>
 </div>
+<h3 *ngIf="clientField.invalid">
+  Ingresa el nombre o mesa del cliente
+</h3>
