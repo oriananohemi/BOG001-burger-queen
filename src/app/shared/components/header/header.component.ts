@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -13,11 +14,16 @@ export class HeaderComponent {
   logo = 'assets/images/brandLetter.png';
 
   constructor(
+    private readonly location: Location,
     public readonly router: Router,
     private authService: AuthService
-    ) { }
+  ) { }
 
-    logOut() {
-      this.authService.logOut();
-    }
+  logOut() {
+    this.authService.logOut();
+  }
+
+  goBack() {
+    this.location.back();
+  }
 }
