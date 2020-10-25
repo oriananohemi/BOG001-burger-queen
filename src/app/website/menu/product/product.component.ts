@@ -1,25 +1,17 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../../../core/definitions/product.model';
-
-import { CartService } from '../../../core/services/cart/cart.service';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent {
   @Input() product: Product;
+  @Output() addProduct: EventEmitter<Product> = new EventEmitter<Product>();
 
   status = '';
-  option = '';
-
-  constructor(
-    private cartService: CartService
-  ) { }
-
-  ngOnInit(): void {
-  }
+  option: string;
 
   showOptions() {
     this.status = 'show';
@@ -33,7 +25,9 @@ export class ProductComponent implements OnInit {
     this.option = option;
   }
 
-  addCart() {
-    this.cartService.addCart(this.product, this.option);
+  emitProduct() {
+    this.product.option = this.option;
+    this.addProduct.emit(this.product);
   }
+
 }

@@ -4,10 +4,12 @@
     <p class="product__description">{{ product.name }}</p>
     <p>{{ product.description }}</p>
     <span class="product__description">{{ product.price }}</span>
-    <select [(ngModel)]="option" (change)="setOption(option)">
-      <option value="" selected>Sabores</option>
-      <option *ngFor="let option of product.options" [value]="option">{{ option }}</option>
-    </select>
-      <button class="button-long" (click)="addCart()">Agregar</button>
+    <!-- <label>
+      Sabores
+      <select [(ngModel)]="option" (change)="setOption(option)">
+        <option *ngFor="let option of product.options" [value]="option">{{ option }}</option>
+      </select>
+    </label> -->
+      <button class="button-long" (click)="emitProduct()">Agregar</button>
   </div>
 </div>

@@ -13,6 +13,7 @@ import { Menu } from '../../../core/definitions/product.model';
 export class MenuComponent implements OnInit {
 
   menu: Observable<Menu[]>;
+  menuType: string;
 
   client = localStorage.getItem('client');
 
@@ -22,6 +23,10 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.menu = this.productsService.getMenuType();
+  }
+
+  showMenu(type: string) {
+    this.menuType = type;
   }
 
 }
