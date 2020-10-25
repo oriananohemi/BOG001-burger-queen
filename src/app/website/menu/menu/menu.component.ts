@@ -11,15 +11,13 @@ import { Menu } from '../../../core/definitions/product.model';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+  client = localStorage.getItem('client');
 
   menu: Observable<Menu[]>;
   menuType: string;
 
-  client = localStorage.getItem('client');
-
   constructor(private productsService: ProductsService) {
   }
-
 
   ngOnInit(): void {
     this.menu = this.productsService.getMenuType();

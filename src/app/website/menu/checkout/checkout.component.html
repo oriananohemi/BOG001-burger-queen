@@ -20,6 +20,8 @@
   </section>
 </div>
 
+
+
 <ng-template #sectionMobile>
   <section class="checkout flex-container">
     <h3>Total: {{ total$ | async }} </h3>
@@ -27,11 +29,17 @@
   </section>
 </ng-template>
 
-<div *ngIf="request === 'success'" class="message">
-  <h3>Pedido: {{ client }} enviado </h3>
-  <button class="button-medium" (click)="confirm()">OK</button>
+
+
+<div *ngIf="request === 'success'" class="message-container">
+  <div class="message">
+    <h3>Pedido: {{ client }} enviado </h3>
+    <button class="button-medium" (click)="confirm()">OK</button>
+  </div>
 </div>
-<div *ngIf="request === 'error'" class="message">
-  <h3>Error al realizar el pedido, intente de nuevo</h3>
-  <button class="button-medium" (click)="showCheckout()">OK</button>
+<div *ngIf="request === 'error'" class="message-container">
+  <div class="message">
+    <h3>Error al realizar el pedido, intente de nuevo</h3>
+    <button class="button-medium" (click)="showCheckout()">OK</button>
+  </div>
 </div>
