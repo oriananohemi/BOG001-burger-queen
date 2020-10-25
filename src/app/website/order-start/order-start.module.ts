@@ -6,7 +6,13 @@ import { OrderStartRoutingModule } from './order-start-routing.module';
 import { OrderStartComponent } from './order-start/order-start.component';
 
 @NgModule({
-  declarations: [OrderStartComponent],
-  imports: [OrderStartRoutingModule, CommonModule, FormsModule],
+  declarations: [
+    OrderStartComponent
+  ],
+  imports: [
+    OrderStartRoutingModule,
+    CommonModule,
+    FormsModule
+  ],
 })
 export class OrderStartModule {}

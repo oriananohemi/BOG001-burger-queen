@@ -171,22 +171,6 @@ empaquetar y desplegar la aplicación respectivamente.
 Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
 _lines_ y _branches_.
 
-Este proyecto incluye un _boilerplate_ con el código necesario para arrancar con
-la parte de backend ya resuelta. El _boilerplate_ incluye los siguientes
-archivos/carpetas con la configuración de Fierbase (hosting, firestore y
-functions):
-
-```text
-./04-burger-queen/
-├── firebase.json
-├── firestore.indexes.json
-├── firestore.rules
-├── functions
-│   ├── index.js
-│   ├── package.json
-└── README.md
-```
-
 Por otro lado, la parte de la interfaz no está incluida, por lo que, deberás
 definir la estructura de carpetas y archivos que consideres necesaria. Puedes
 guiarte de las convenciones del _framework_ elegido. Por ende, los _tests_ y el
@@ -212,21 +196,21 @@ que se puedan ir preparando en orden.
 
 Lo que debe ocurrir para que se satisfagan las necesidades del usuario)
 
-- Anotar nombre de cliente.
-- Agregar productos al pedido.
-- Eliminar productos.
-- Ver resumen y el total de la compra.
-- Enviar pedido a cocina (guardar en alguna base de datos).
-- Se ve y funciona bien en una _tablet_
+- [x] Anotar nombre de cliente.
+- [x] Agregar productos al pedido.
+- [x] Eliminar productos.
+- [x] Ver resumen y el total de la compra.
+- [x] Enviar pedido a cocina (guardar en alguna base de datos).
+- [x] Se ve y funciona bien en una _tablet_
 
 ##### Definición de terminado
 
 Lo acordado que debe ocurrir para decir que la historia está terminada.
 
-- Debes haber recibido _code review_ de al menos una compañera.
-- Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-- Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-- Desplegaste tu aplicación y has etiquetado tu versión (git tag).
+- [x] Debes haber recibido _code review_ de al menos una compañera.
+- [x] Haces _test_ unitarios y, además, has testeado tu producto manualmente.
+- [x] Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
+- [x] Desplegaste tu aplicación y has etiquetado tu versión (git tag).
 
 ---
 
@@ -238,17 +222,18 @@ que un pedido está listo para servirlo a un cliente.
 
 ##### Criterios de aceptación
 
-- Ver los pedidos ordenados según se van haciendo.
-- Marcar los pedidos que se han preparado y están listos para servirse.
-- Ver el tiempo que tomó prepara el pedido desde que llegó hasta que se
-  marcó como completado.
+- [x] Ver los pedidos ordenados según se van haciendo.
+- [x] Marcar los pedidos que se han preparado y están listos para servirse.
+
+- [ ] Ver el tiempo que tomó prepara el pedido desde que llegó hasta que se
+      marcó como completado.
 
 ##### Definición de terminado
 
-- Debes haber recibido _code review_ de al menos una compañera.
-- Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-- Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-- Desplegaste tu aplicación y has etiquetado tu versión (git tag).
+- [x] Debes haber recibido _code review_ de al menos una compañera.
+- [x] Haces _test_ unitarios y, además, has testeado tu producto manualmente.
+- [x] Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
+- [x] Desplegaste tu aplicación y has etiquetado tu versión (git tag).
 
 ---
 
@@ -259,17 +244,16 @@ rápidamente a los clientes que las hicieron.
 
 ##### Criterios de aceptación
 
-- Ver listado de pedido listos para servir.
-- Marcar pedidos que han sido entregados.
+- [x] Ver listado de pedido listos para servir.
+- [x] Marcar pedidos que han sido entregados.
 
 ##### Definición de terminado
 
-- Debes haber recibido _code review_ de al menos una compañera.
-- Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-- Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-- Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-- Los datos se deben mantener íntegros, incluso después de que un pedido ha
-  terminado. Todo esto para poder tener estadísticas en el futuro.
+- [x] Debes haber recibido _code review_ de al menos una compañera.
+- [x] Haces _test_ unitarios y, además, has testeado tu producto manualmente.
+- [x] Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
+- [x] Desplegaste tu aplicación y has etiquetado tu versión (git tag).
+- [x] Los datos se deben mantener íntegros, incluso después de que un pedido ha terminado. Todo esto para poder tener estadísticas en el futuro.
 
 ---
 

@@ -9,11 +9,13 @@ import { OrderCompletedComponent } from './order-completed/order-completed.compo
 
 
 @NgModule({
-  declarations: [OrderHistoryComponent, OrderActiveComponent, OrderCompletedComponent],
+  declarations: [
+    OrderHistoryComponent,
+    OrderActiveComponent,
+    OrderCompletedComponent],
   imports: [
     CommonModule,
     OrderHistoryRoutingModule,
-    SharedModule
   ]
 })
 export class OrderHistoryModule { }
