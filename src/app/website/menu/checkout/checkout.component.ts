@@ -19,6 +19,7 @@ export class CheckoutComponent implements OnInit {
   products$: Observable<Product[]>;
   status = '';
   client: string;
+  waiter: string;
   request: string;
 
   constructor(
@@ -27,6 +28,7 @@ export class CheckoutComponent implements OnInit {
     @Inject('Window') private readonly window: Window
   ) {
     this.client = this.cartService.client;
+    this.waiter = this.cartService.waiter;
     this.products$ = this.cartService.products$;
     this.total$ = this.cartService.total$;
     }
@@ -51,11 +53,14 @@ export class CheckoutComponent implements OnInit {
   }
 
   save() {
-    this.cartService.addOrder()
-    .then(() => {
-      this.request = 'success';
-    })
-    .catch(() => this.request = 'error');
+    console.log(this.waiter)
+    if(this.waiter !== null) {
+      this.cartService.addOrder()
+      .then(() => {
+        this.request = 'success';
+      })
+      .catch(() => this.request = 'error');
+    }
   }
 
   confirm() {

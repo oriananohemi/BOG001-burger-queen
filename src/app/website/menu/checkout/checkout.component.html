@@ -21,6 +21,12 @@
 </div>
 
 
+<div *ngIf="waiter === null" class="message-container">
+  <div class="message">
+    <h3>Recuerda iniciar sesion como mesero</h3>
+    <a class="button-medium" routerLink="/inicia-sesion">Ir a Inicio de Sesion</a>
+  </div>
+</div>
 
 <ng-template #sectionMobile>
   <section class="checkout flex-container">
@@ -28,7 +34,6 @@
     <span (click)="showCheckout()">+</span>
   </section>
 </ng-template>
-
 
 
 <div *ngIf="request === 'success'" class="message-container">

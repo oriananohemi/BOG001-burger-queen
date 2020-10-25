@@ -30,6 +30,7 @@
   border: 1px solid var(--primary);
   background-color: var(--black);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 50px auto;
   padding: 20px;
