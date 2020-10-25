@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './components/header/header.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,

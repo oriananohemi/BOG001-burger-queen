@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { SignUpComponent } from '../shared/components/sign-up/sign-up.component';
 import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
       {
         path: 'pedidos',
         loadChildren: () => import('./order-history/order-history.module').then(m => m.OrderHistoryModule),
+      },
+      {
+        path: 'inicia-sesion',
+        component: SignUpComponent,
       }
     ]
   }

@@ -1,5 +1,6 @@
-<!-- <form action="">
-  <input type="text" name="" id="" placeholder="Usuario">
-  <input type="text" name="" id="" placeholder="Contraseña">
-  <button>Iniciar Sesion</button>
-</form> -->
+<form action="" class="form">
+  <h2 class="title">Inicio de Sesion</h2>
+  <input type="text" [(ngModel)]="user" placeholder="Usuario">
+  <input type="text" [(ngModel)]="pass" placeholder="Contraseña">
+  <button (click)="logIn()" class="button-medium">Iniciar Sesion</button>
+</form>

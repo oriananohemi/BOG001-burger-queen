@@ -1,0 +1,14 @@
+.form {
+  border: 1px solid var(--primary);
+  background-color: var(--black);
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  width: 90%;
+  input {
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+  }
+}
