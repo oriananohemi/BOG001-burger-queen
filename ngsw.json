@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1603729819957,
+  "timestamp": 1603735502490,
   "index": "/BOG001-burger-queen/index.html",
   "assetGroups": [
     {
@@ -24,7 +24,7 @@
         "/BOG001-burger-queen/manifest.webmanifest",
         "/BOG001-burger-queen/polyfills.35a5ca1855eb057f016a.js",
         "/BOG001-burger-queen/runtime.312469993f9397cfa4d2.js",
-        "/BOG001-burger-queen/styles.942224fa6b5210e0fd12.css"
+        "/BOG001-burger-queen/styles.9c09624ebeaad3862070.css"
       ],
       "patterns": []
     },
@@ -81,7 +81,21 @@
       "patterns": []
     }
   ],
-  "dataGroups": [],
+  "dataGroups": [
+    {
+      "name": "api",
+      "patterns": [
+        "https:\\/\\/firestore\\.googleapis\\.com\\/.*"
+      ],
+      "strategy": "performance",
+      "maxSize": 3,
+      "maxAge": 86400000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
   "hashTable": {
     "/BOG001-burger-queen/10.0453fbc0304dc4da20ae.js": "b6d703c1e7992ce2456518b48eb60b3ab12b5b9a",
     "/BOG001-burger-queen/4.4e6ca8123f8d7d1bdee6.js": "678fd254f46a3113d6118726fef5db2e1fb499b7",
@@ -132,12 +146,12 @@
     "/BOG001-burger-queen/assets/images/sandwich.jpg": "6ba44147f9dce25ed96c2c7bbcdb6cd617afda6e",
     "/BOG001-burger-queen/assets/images/sandwich2.jpg": "b5a09b2daa22afa9ea622d73fdd3e42f1476cd7c",
     "/BOG001-burger-queen/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/BOG001-burger-queen/index.html": "f5f645da225b7d62fd157bad95559aecc37adfb7",
+    "/BOG001-burger-queen/index.html": "9f2faa021d112ce236c3d32c1bae113a8e364ea3",
     "/BOG001-burger-queen/main.3e2493a802009bcbc8c6.js": "1dad05f01de50815448787b9bdb803fdc7704f42",
     "/BOG001-burger-queen/manifest.webmanifest": "7cbaed2afab1edf1e22d1c56889e68910cbd3bd7",
     "/BOG001-burger-queen/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
     "/BOG001-burger-queen/runtime.312469993f9397cfa4d2.js": "859fc5000b90d0be94cfedc8293be79477142145",
-    "/BOG001-burger-queen/styles.942224fa6b5210e0fd12.css": "62784d1b6bee42d553072642e9edc7a1e601f99c"
+    "/BOG001-burger-queen/styles.9c09624ebeaad3862070.css": "f299d32e9bb932bec0052d68b0c3b318d3719a90"
   },
   "navigationUrls": [
     {
