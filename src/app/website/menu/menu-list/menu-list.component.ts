@@ -30,7 +30,6 @@ export class MenuListComponent {
   }
 
   addCart(product: Product) {
-    console.log(product)
     this.cartService.addCart(product, this.option);
   }
 }

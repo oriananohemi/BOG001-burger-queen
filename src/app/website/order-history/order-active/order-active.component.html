@@ -1,5 +1,11 @@
 <article class="order">
   <h3>{{ order?.name }}</h3>
   <h3>{{ order?.total }}</h3>
+  <ul *ngFor="let ped of order.productsArray">
+    <li class="flex-container">
+      <h4>{{ ped.name }}</h4>
+      <span>{{ ped.amount }}</span>
+    </li>
+  </ul>
   <button (click)="delivered(order.id)" class="button-medium">Entregar</button>
 </article>

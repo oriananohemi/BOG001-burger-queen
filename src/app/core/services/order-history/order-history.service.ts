@@ -16,7 +16,7 @@ export class OrderHistoryService {
 
   getAllOrdersActive(): Observable<Order[]>  {
     return this.orders$.pipe(
-      map((orders) => orders.filter((order) => order.status === OrderStatus.toDeliver))
+      map((orders) => orders.filter((order) => order.status === OrderStatus.toDeliver || order.waiter === this.waiterName))
     );
   }
 

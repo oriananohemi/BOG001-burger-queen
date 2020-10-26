@@ -53,7 +53,6 @@ export class CheckoutComponent implements OnInit {
   }
 
   save() {
-    console.log(this.waiter)
     if(this.waiter !== null) {
       this.cartService.addOrder()
       .then(() => {
