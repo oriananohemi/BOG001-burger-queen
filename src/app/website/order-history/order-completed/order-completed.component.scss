@@ -1,6 +1,21 @@
 .order {
   border: 1px solid var(--primary);
   background-color: var(--black);
+  color: var(--white);
+  display: block;
+  margin: 0 auto;
   padding: 20px;
   margin: 10px;
+}
+
+@media (min-width: 700px) {
+  .order {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1020px) {
+  .order {
+    width: 400px;
+  }
 }

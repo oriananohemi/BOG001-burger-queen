@@ -5,4 +5,12 @@
   &__brand {
     width: 180px;
   }
+  &__option {
+    background-color: var(--black);
+    position: absolute;
+  }
+  &__link {
+    display: block;
+    margin: 10px auto;
+  }
 }

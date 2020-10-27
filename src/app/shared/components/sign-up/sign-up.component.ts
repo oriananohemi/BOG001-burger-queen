@@ -27,7 +27,7 @@ export class SignUpComponent implements OnInit {
     this.authService.signInWithEmail(this.user.value, this.pass.value)
     .then(() => {
       localStorage.setItem('waiter', this.user.value);
-      this.router.navigate(['mesas'])
+      this.router.navigate(['mesas']);
     })
   }
 }

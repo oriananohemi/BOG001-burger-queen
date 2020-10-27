@@ -11,10 +11,10 @@
       </li>
       <li>
         <div *ngIf="waiterName; else signUp">
-          <h3>{{ waiterName }}</h3>
-          <a routerLink="pedidos" class="header__link">Pedidos</a>
-          <div>
-            <button (click)="logOut()">Cerrar Sesion</button>
+          <h3 (click)="showOption()">{{ waiterName | slice:0:7 | titlecase }}</h3>
+          <div *ngIf="option === 'show'" class="header__option">
+            <h4 routerLink="pedidos" class="header__link">Pedidos</h4>
+            <h4 (click)="logOut()" class="header__link">Cerrar Sesion</h4>
           </div>
         </div>
         <ng-template #signUp>

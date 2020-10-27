@@ -1,7 +1,12 @@
 .orders {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   margin: 20px;
+}
+
+@media (min-width: 700px) {
+  .orders {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }

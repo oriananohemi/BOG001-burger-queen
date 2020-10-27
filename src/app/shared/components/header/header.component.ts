@@ -9,6 +9,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  option = '';
   waiterName = localStorage.getItem('waiter');
   schedule = localStorage.getItem('kitchen');
   logo = 'assets/images/brandLetter.png';
@@ -20,11 +21,25 @@ export class HeaderComponent {
   ) { }
 
   logOut() {
-    this.authService.logOut();
-    localStorage.removeItem('waiter');
+    this.authService.logOut()
+    .then(() => {
+      localStorage.removeItem('waiter');
+      this.router.navigate(['mesas']);
+    })
+    .catch(() => {
+
+    });
   }
 
   goBack() {
     this.location.back();
+  }
+
+  showOption() {
+    if (this.option === '') {
+      this.option = 'show';
+    } else {
+      this.option = '';
+    }
   }
 }
