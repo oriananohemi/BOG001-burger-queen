@@ -21,6 +21,7 @@ export class HeaderComponent {
 
   logOut() {
     this.authService.logOut();
+    localStorage.removeItem('waiter');
   }
 
   goBack() {

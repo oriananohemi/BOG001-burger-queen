@@ -12,7 +12,7 @@ export class AuthService {
   }
 
   signInWithEmail(email, pass): Promise<firebase.auth.UserCredential> {
-    return this.fireAuth.signInWithEmailAndPassword(email,pass);
+    return this.fireAuth.signInWithEmailAndPassword(email, pass);
   }
 
   logOut() {

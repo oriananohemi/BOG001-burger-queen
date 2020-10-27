@@ -12,7 +12,7 @@ export class OrderStartComponent {
   clientField: FormControl;
 
   constructor(private router: Router) {
-    this.clientField = new FormControl('',[Validators.required]);
+    this.clientField = new FormControl('', [Validators.required]);
   }
 
   clientSave() {

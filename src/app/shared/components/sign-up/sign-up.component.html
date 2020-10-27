@@ -1,6 +1,7 @@
-<form action="" class="form">
+<section class="signup-container">
   <h2 class="title">Inicio de Sesion</h2>
-  <input type="text" [(ngModel)]="user" placeholder="Usuario">
-  <input type="text" [(ngModel)]="pass" placeholder="Contraseña">
-  <button (click)="logIn()" class="button-medium">Iniciar Sesion</button>
-</form>
+  <input type="email" [formControl]="user" placeholder="mesero@burgerqueen.com">
+  <input type="password" [formControl]="pass" placeholder="******">
+  <button (click)="logIn()" class="button-medium" [disabled]="user.invalid && pass.invalid">Iniciar Sesion</button>
+</section>
+<h2 *ngIf="user.invalid && pass.invalid">Ingrese su usuario y contraseña</h2>
