@@ -135,7 +135,7 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 - [x] [Creación y uso de servicios.](https://angular.io/guide/architecture-services#providing-services)
 - [x] [Manejos de rutas.](https://angular.io/guide/router)
 - [ ] [Creación y uso Observables.](https://angular.io/guide/observables-in-angular)
-- [ ] [Uso de HttpClient.](https://angular.io/guide/http)
+- [x] [Uso de HttpClient.](https://angular.io/guide/http)
 - [ ] [Estilos de componentes (ngStyle / ngClass)](https://angular.io/guide/template-syntax#built-in-directives)
 
 ### UX
