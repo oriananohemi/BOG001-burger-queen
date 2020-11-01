@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604272859021,
+  "timestamp": 1604274425896,
   "index": "/burger-queen/index.html",
   "assetGroups": [
     {
@@ -54,6 +54,12 @@
         "/burger-queen/assets/images/cocina.jpeg",
         "/burger-queen/assets/images/cocina.jpg",
         "/burger-queen/assets/images/cocina2.jpg",
+        "/burger-queen/assets/images/demo1.png",
+        "/burger-queen/assets/images/demo2.png",
+        "/burger-queen/assets/images/demo3.png",
+        "/burger-queen/assets/images/demo4.png",
+        "/burger-queen/assets/images/demo5.png",
+        "/burger-queen/assets/images/demo6.png",
         "/burger-queen/assets/images/favicon.png",
         "/burger-queen/assets/images/fondoDestokp.jpeg",
         "/burger-queen/assets/images/fondoMobile.jpeg",
@@ -123,6 +129,12 @@
     "/burger-queen/assets/images/cocina.jpeg": "8dfa10d148c45e4535227a9cf9215126279d5064",
     "/burger-queen/assets/images/cocina.jpg": "e6bd44bb312ca943980836799a9b49b1e0d65a53",
     "/burger-queen/assets/images/cocina2.jpg": "8a57f45778a694d9780a7741d239e127b3f2de8b",
+    "/burger-queen/assets/images/demo1.png": "c34acd353071d38b47d9682309aed523da5b57c5",
+    "/burger-queen/assets/images/demo2.png": "4741430096cf875fd8cf2bc75a78b76011ef9ab2",
+    "/burger-queen/assets/images/demo3.png": "4d904691c029ee1fc147e171f960076fa6dc37ce",
+    "/burger-queen/assets/images/demo4.png": "01679770bf21f6453c0d0737e157460bc3d47028",
+    "/burger-queen/assets/images/demo5.png": "80a0aa215ac780191227adae604cc8a36079fb37",
+    "/burger-queen/assets/images/demo6.png": "1bc53b22935cb51aac01d9731abfa94ef7802cd4",
     "/burger-queen/assets/images/favicon.png": "313ef12930fe532cfe9c459ee2b528203721276f",
     "/burger-queen/assets/images/fondoDestokp.jpeg": "4fb3a3c936688d1ae2ca9b80937f6d1b1f8acc4a",
     "/burger-queen/assets/images/fondoMobile.jpeg": "29aeb055af8744530cd4831d0dfac46c56eb5b7f",
@@ -149,7 +161,7 @@
     "/burger-queen/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/burger-queen/index.html": "ff809e25739abd5f4b862a27b282f71b633a55eb",
     "/burger-queen/main.2549093f56ceb4fa0901.js": "cfdaa0e957f13ef2271b05519693ba5c6825171c",
-    "/burger-queen/manifest.webmanifest": "66e3c55699d175c39790039f8cdb727ef3b373e3",
+    "/burger-queen/manifest.webmanifest": "1a6880f9cdf4da1e2070327756ef0058b7ad2380",
     "/burger-queen/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
     "/burger-queen/runtime.64a2aedbe2cd24d4b11f.js": "7c234b9aa993f6ebecde584ad44eed1d2e55a70e",
     "/burger-queen/styles.9c09624ebeaad3862070.css": "f299d32e9bb932bec0052d68b0c3b318d3719a90"

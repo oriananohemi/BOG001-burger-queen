@@ -3,7 +3,7 @@
   "short_name": "Burger Queen",
   "theme_color": "#f4914a",
   "background_color": "#fafafa",
-  "display": "fullscreen",
+  "display": "standalone",
   "scope": "./",
   "start_url": "./",
   "icons": [
