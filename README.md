@@ -66,7 +66,11 @@ Esta es la información que tenemos del cliente:
 
 [Prototipo en Figma](https://www.figma.com/file/9qHOuwFhD4l3RxFpAhg0w5/Burger-Queen)
 
-<img width=300 src="./src/assets/images/demo1.png"><img width=300 src="./src/assets/images/demo2.png"><img width=300 src="./src/assets/images/demo3.png"><img width=300 src="./src/assets/images/demo6.png"><img width=300 src="./src/assets/images/demo4.png">
+<img width=300 src="./src/assets/images/demo1.png">
+<img width=300 src="./src/assets/images/demo2.png">
+<img width=300 src="./src/assets/images/demo3.png">
+<img width=300 src="./src/assets/images/demo6.png">
+<img width=300 src="./src/assets/images/demo4.png">
 
 ## 2. Objetivos de aprendizaje
 
