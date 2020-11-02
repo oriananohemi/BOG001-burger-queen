@@ -2,10 +2,11 @@
 
 ## Índice
 
-- [1. Resumen del proyecto](#2-resumen-del-proyecto)
-- [2. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-- [3. Consideraciones generales](#4-consideraciones-generales)
-- [4. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
+- [1. Resumen del proyecto](#1-resumen-del-proyecto)
+- [2. Objetivos de aprendizaje](#2-objetivos-de-aprendizaje)
+- [3. Prototipo](#3-prototipo)
+- [4. Prototipo](#4-demo)
+- [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
 
 ---
 
@@ -15,8 +16,6 @@ Un pequeño restaurante de hamburguesas, que está creciendo, necesita una
 interfaz en la que puedan tomar pedidos usando una _tablet_, y enviarlos
 a la cocina para que se preparen ordenada y eficientemente (a través de un
 _backend_ del que nos darán detalles más adelante).
-
-[Demo del Proyecto](https://oriananohemi.github.io/burger-queen/)
 
 ![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
 
@@ -59,18 +58,6 @@ Esta es la información que tenemos del cliente:
 >
 > Nuestros clientes son bastante indecisos, por lo que es muy común que cambien
 > el su pedido varias veces antes de finalizarlo.
-
-### Prototipo
-
-[Demo en Figma](https://www.figma.com/proto/9qHOuwFhD4l3RxFpAhg0w5/Burger-Queen?node-id=22%3A1&scaling=min-zoom)
-
-[Prototipo en Figma](https://www.figma.com/file/9qHOuwFhD4l3RxFpAhg0w5/Burger-Queen)
-
-<img width=300 src="./src/assets/images/demo1.png">
-<img width=300 src="./src/assets/images/demo2.png">
-<img width=300 src="./src/assets/images/demo3.png">
-<img width=300 src="./src/assets/images/demo6.png">
-<img width=300 src="./src/assets/images/demo4.png">
 
 ## 2. Objetivos de aprendizaje
 
@@ -148,38 +135,29 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 - [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
 - [ ] Planear y ejecutar tests de usabilidad.
 
-## 3. Consideraciones generales
+## 3. Prototipo
 
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6+), HTML y CSS y empaquetada de manera automatizada.
-En este proyecto Sí está permitido usar librerías o frameworks
-(debes elegir entre [React](https://es.reactjs.org/), [Vue](https://vuejs.org/) o
-[Angular](https://angular.io/)).
+[Demo en Figma](https://www.figma.com/proto/9qHOuwFhD4l3RxFpAhg0w5/Burger-Queen?node-id=22%3A1&scaling=min-zoom)
 
-La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde una
-_tablet_, pero **no queremos una app nativa**, sino una web app que sea
-**responsive** y pueda funcionar **offline**.
+[Prototipo en Figma](https://www.figma.com/file/9qHOuwFhD4l3RxFpAhg0w5/Burger-Queen)
 
-Necesitamos pensar bien en el aspecto UX de de quienes van a tomar los pedidos,
-el tamaño y aspecto de los botones, la visibilidad del estado actual del
-pedido, etc.
+<img width=300 src="./src/assets/images/demo1.png">
+<img width=300 src="./src/assets/images/demo2.png">
+<img width=300 src="./src/assets/images/demo3.png">
+<img width=300 src="./src/assets/images/demo6.png">
+<img width=300 src="./src/assets/images/demo4.png">
 
-La aplicación desplegada debe tener 80% o más el las puntuaciones de
-Performance, Progressive Web App, Accessibility y Best Practices de Lighthouse.
+## 4. Demo del Proyecto
 
-La aplicación debe hacer uso de `npm-scripts` y contar con scripts `start`,
-`test`, `build` y `deploy`, que se encarguen de arrancar, correr las pruebas,
-empaquetar y desplegar la aplicación respectivamente.
+[Demo del Proyecto](https://oriananohemi.github.io/burger-queen/)
 
-Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
-_lines_ y _branches_.
+Inicie sesion con:
 
-Por otro lado, la parte de la interfaz no está incluida, por lo que, deberás
-definir la estructura de carpetas y archivos que consideres necesaria. Puedes
-guiarte de las convenciones del _framework_ elegido. Por ende, los _tests_ y el
-_setup_ necesario para ejecutarlos, serán hechos por ti.
+**Email:** mesero1@burgerqueen.com - **Password:** 'abcdef'
 
-## 4. Criterios de aceptación mínimos del proyecto
+**Email:** mesero2@burgerqueen.com - **Password:** '123456'
+
+## 5. Criterios de aceptación mínimos del proyecto
 
 ### Definición del producto
 
