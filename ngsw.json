@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604274425896,
+  "timestamp": 1604278110342,
   "index": "/burger-queen/index.html",
   "assetGroups": [
     {
@@ -12,7 +12,7 @@
       },
       "urls": [
         "/burger-queen/10.46ec291e8b9f6e5733c6.js",
-        "/burger-queen/4.47668d73c67c295b24fc.js",
+        "/burger-queen/4.6f1d5aa0a25c93c3c5ee.js",
         "/burger-queen/5.f13f7f74d48cfa852b7f.js",
         "/burger-queen/6.1aaaf935131048585f15.js",
         "/burger-queen/7.cc63c23f8bdf9d2e7488.js",
@@ -23,7 +23,7 @@
         "/burger-queen/main.2549093f56ceb4fa0901.js",
         "/burger-queen/manifest.webmanifest",
         "/burger-queen/polyfills.35a5ca1855eb057f016a.js",
-        "/burger-queen/runtime.64a2aedbe2cd24d4b11f.js",
+        "/burger-queen/runtime.167d7383b50457c6a90b.js",
         "/burger-queen/styles.9c09624ebeaad3862070.css"
       ],
       "patterns": []
@@ -105,7 +105,7 @@
   ],
   "hashTable": {
     "/burger-queen/10.46ec291e8b9f6e5733c6.js": "e187b23f0d64f5814b6a24f661256c379d753045",
-    "/burger-queen/4.47668d73c67c295b24fc.js": "ca0e94d441a0f7294b6c0dcdf4abca6d312af9f9",
+    "/burger-queen/4.6f1d5aa0a25c93c3c5ee.js": "b4c0d455f4645bb3ed4dfab86b672d25e4cf59eb",
     "/burger-queen/5.f13f7f74d48cfa852b7f.js": "f5f505dd14374633b8635d25645352450f333448",
     "/burger-queen/6.1aaaf935131048585f15.js": "0f6bf0fbf37e2c9a8d504d5a4ac58da672ffdccd",
     "/burger-queen/7.cc63c23f8bdf9d2e7488.js": "65f16c30f38d466b71fa801ad70594cd190bba6e",
@@ -159,11 +159,11 @@
     "/burger-queen/assets/images/sandwich.jpg": "6ba44147f9dce25ed96c2c7bbcdb6cd617afda6e",
     "/burger-queen/assets/images/sandwich2.jpg": "b5a09b2daa22afa9ea622d73fdd3e42f1476cd7c",
     "/burger-queen/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/burger-queen/index.html": "ff809e25739abd5f4b862a27b282f71b633a55eb",
+    "/burger-queen/index.html": "c420fbffcf0c7a4dbe3fbd3fa5447a56f34476f0",
     "/burger-queen/main.2549093f56ceb4fa0901.js": "cfdaa0e957f13ef2271b05519693ba5c6825171c",
     "/burger-queen/manifest.webmanifest": "1a6880f9cdf4da1e2070327756ef0058b7ad2380",
     "/burger-queen/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
-    "/burger-queen/runtime.64a2aedbe2cd24d4b11f.js": "7c234b9aa993f6ebecde584ad44eed1d2e55a70e",
+    "/burger-queen/runtime.167d7383b50457c6a90b.js": "35b722ed5ae965504d8696b25977178247f36e83",
     "/burger-queen/styles.9c09624ebeaad3862070.css": "f299d32e9bb932bec0052d68b0c3b318d3719a90"
   },
   "navigationUrls": [
