@@ -10,13 +10,12 @@ import { OrderHistoryService } from './services/order-history/order-history.serv
 import { KitchenService } from './services/kitchen/kitchen.service';
 import { CartService } from './services/cart/cart.service';
 import { AuthService } from './services/auth/auth.service';
-
 @NgModule({
   imports: [
     CommonModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
   ],
   providers: [
     ProductsService,
