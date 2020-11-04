@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604458074077,
+  "timestamp": 1604458742714,
   "index": "/burger-queen/index.html",
   "assetGroups": [
     {
@@ -20,6 +20,7 @@
         "/burger-queen/8.cb4f51edddfa9d60e522.js",
         "/burger-queen/9.7d5f2c38f26f08c90585.js",
         "/burger-queen/favicon.ico",
+        "/burger-queen/firebase-messaging-sw.js",
         "/burger-queen/index.html",
         "/burger-queen/main.baa4800e796c7ceb626d.js",
         "/burger-queen/manifest.webmanifest",
@@ -161,6 +162,7 @@
     "/burger-queen/assets/images/sandwich.jpg": "6ba44147f9dce25ed96c2c7bbcdb6cd617afda6e",
     "/burger-queen/assets/images/sandwich2.jpg": "b5a09b2daa22afa9ea622d73fdd3e42f1476cd7c",
     "/burger-queen/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/burger-queen/firebase-messaging-sw.js": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "/burger-queen/index.html": "11ee64b588b8b5e6d43da32e368d4d9705e29335",
     "/burger-queen/main.baa4800e796c7ceb626d.js": "9bed2ba0e464a98389b997d2f7c959219451252a",
     "/burger-queen/manifest.webmanifest": "1a6880f9cdf4da1e2070327756ef0058b7ad2380",
