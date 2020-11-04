@@ -7,6 +7,12 @@
   width: 60%;
 }
 
+.button-position {
+  top: 100px;
+  left: 0;
+  position: absolute;
+}
+
 @media (min-width: 700px) {
   .area {
     width: 40%;

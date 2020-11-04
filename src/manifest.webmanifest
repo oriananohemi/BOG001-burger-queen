@@ -1,7 +1,7 @@
 {
-  "name": "burgerQueen",
-  "short_name": "burgerQueen",
-  "theme_color": "#1976d2",
+  "name": "Burger Queen",
+  "short_name": "Burger Queen",
+  "theme_color": "#f4914a",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",

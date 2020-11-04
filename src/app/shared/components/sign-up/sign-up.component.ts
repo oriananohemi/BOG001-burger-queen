@@ -28,6 +28,6 @@ export class SignUpComponent implements OnInit {
     .then(() => {
       localStorage.setItem('waiter', this.user.value);
       this.router.navigate(['mesas']);
-    })
+    });
   }
 }
