@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604453391936,
+  "timestamp": 1604453936406,
   "index": "/burger-queen/index.html",
   "assetGroups": [
     {
@@ -12,9 +12,9 @@
       },
       "urls": [
         "/burger-queen/10.46ec291e8b9f6e5733c6.js",
-        "/burger-queen/4.8695144e2653be0a1d7a.js",
+        "/burger-queen/4.47668d73c67c295b24fc.js",
         "/burger-queen/5.f13f7f74d48cfa852b7f.js",
-        "/burger-queen/6.1aaaf935131048585f15.js",
+        "/burger-queen/6.7bc4d4e08f9c2cc15451.js",
         "/burger-queen/7.cc63c23f8bdf9d2e7488.js",
         "/burger-queen/8.c3662617d91c020ae6eb.js",
         "/burger-queen/9.09e9bc41cf4e3cc48ad2.js",
@@ -23,7 +23,7 @@
         "/burger-queen/main.2549093f56ceb4fa0901.js",
         "/burger-queen/manifest.webmanifest",
         "/burger-queen/polyfills.35a5ca1855eb057f016a.js",
-        "/burger-queen/runtime.53fe7bbcd519e9eb6a17.js",
+        "/burger-queen/runtime.41ee86b42985584adf00.js",
         "/burger-queen/styles.9c09624ebeaad3862070.css"
       ],
       "patterns": []
@@ -105,9 +105,9 @@
   ],
   "hashTable": {
     "/burger-queen/10.46ec291e8b9f6e5733c6.js": "e187b23f0d64f5814b6a24f661256c379d753045",
-    "/burger-queen/4.8695144e2653be0a1d7a.js": "c6122b6561c4375922b3caafa216e9cf55af68b6",
+    "/burger-queen/4.47668d73c67c295b24fc.js": "ca0e94d441a0f7294b6c0dcdf4abca6d312af9f9",
     "/burger-queen/5.f13f7f74d48cfa852b7f.js": "f5f505dd14374633b8635d25645352450f333448",
-    "/burger-queen/6.1aaaf935131048585f15.js": "0f6bf0fbf37e2c9a8d504d5a4ac58da672ffdccd",
+    "/burger-queen/6.7bc4d4e08f9c2cc15451.js": "74e7e76851708f04c64e25fee783d8a6b40263d9",
     "/burger-queen/7.cc63c23f8bdf9d2e7488.js": "65f16c30f38d466b71fa801ad70594cd190bba6e",
     "/burger-queen/8.c3662617d91c020ae6eb.js": "8e15ab6fbe84d1336578f126ef8383cd9b2a6c3d",
     "/burger-queen/9.09e9bc41cf4e3cc48ad2.js": "7f570e58508b498e8d87ba1fa864e6362a677b04",
@@ -159,11 +159,11 @@
     "/burger-queen/assets/images/sandwich.jpg": "6ba44147f9dce25ed96c2c7bbcdb6cd617afda6e",
     "/burger-queen/assets/images/sandwich2.jpg": "b5a09b2daa22afa9ea622d73fdd3e42f1476cd7c",
     "/burger-queen/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/burger-queen/index.html": "0543e75a178d1109eedfe6ba24dbc2ad92be3bbd",
+    "/burger-queen/index.html": "b9e497cc16c8968575a51512e6746b4b1ec4b3c7",
     "/burger-queen/main.2549093f56ceb4fa0901.js": "cfdaa0e957f13ef2271b05519693ba5c6825171c",
     "/burger-queen/manifest.webmanifest": "1a6880f9cdf4da1e2070327756ef0058b7ad2380",
     "/burger-queen/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
-    "/burger-queen/runtime.53fe7bbcd519e9eb6a17.js": "69dbcb9b1881d214c78afe7dc41e5837dd912f01",
+    "/burger-queen/runtime.41ee86b42985584adf00.js": "8527a3bad59e08ecdbc222af1361fb17b39af067",
     "/burger-queen/styles.9c09624ebeaad3862070.css": "f299d32e9bb932bec0052d68b0c3b318d3719a90"
   },
   "navigationUrls": [
