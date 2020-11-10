@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1604461670303,
+  "timestamp": 1605027068460,
   "index": "/burger-queen/index.html",
   "assetGroups": [
     {
@@ -85,7 +85,10 @@
         "/burger-queen/assets/images/quesoAmarillo.jpg",
         "/burger-queen/assets/images/sandwich.jpeg",
         "/burger-queen/assets/images/sandwich.jpg",
-        "/burger-queen/assets/images/sandwich2.jpg"
+        "/burger-queen/assets/images/sandwich2.jpg",
+        "/burger-queen/fondoDestokp.392e2a8dcb0f75f2efa7.jpeg",
+        "/burger-queen/fondoMobile.79149284ed1e869a1878.jpeg",
+        "/burger-queen/fondoTablet.78a8cd67b5ca0672334e.jpeg"
       ],
       "patterns": []
     }
@@ -97,7 +100,7 @@
         "https:\\/\\/firestore\\.googleapis\\.com\\/.*"
       ],
       "strategy": "freshness",
-      "maxSize": 3,
+      "maxSize": 30,
       "maxAge": 86400000,
       "timeoutMs": 2000,
       "cacheQueryOptions": {
@@ -165,6 +168,9 @@
     "/burger-queen/assets/images/sandwich2.jpg": "b5a09b2daa22afa9ea622d73fdd3e42f1476cd7c",
     "/burger-queen/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/burger-queen/firebase-messaging-sw.js": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "/burger-queen/fondoDestokp.392e2a8dcb0f75f2efa7.jpeg": "4fb3a3c936688d1ae2ca9b80937f6d1b1f8acc4a",
+    "/burger-queen/fondoMobile.79149284ed1e869a1878.jpeg": "29aeb055af8744530cd4831d0dfac46c56eb5b7f",
+    "/burger-queen/fondoTablet.78a8cd67b5ca0672334e.jpeg": "ba20f0ab981b955892b63e2a8b5d4843955b28b8",
     "/burger-queen/index.html": "2156c5bc53fde8594aa1cf15a2a3746192e01ee3",
     "/burger-queen/main.49ec9fab41f346cdfae5.js": "4fdfb209a37e856ef6230930c15be71ec2b8dba4",
     "/burger-queen/manifest.webmanifest": "1a6880f9cdf4da1e2070327756ef0058b7ad2380",
