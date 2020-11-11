@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1605056406604,
+  "timestamp": 1605056759156,
   "index": "/burger-queen/index.html",
   "assetGroups": [
     {
@@ -97,7 +97,7 @@
     {
       "name": "api",
       "patterns": [
-        "https:\\/\\/firestore\\.googleapis\\.com\\/"
+        "https:\\/\\/firestore\\.googleapis\\.com\\/.*"
       ],
       "strategy": "freshness",
       "maxSize": 3,
