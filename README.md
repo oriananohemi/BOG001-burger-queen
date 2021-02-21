@@ -149,6 +149,8 @@ A continuación puedes ver los objetivos de aprendizaje de este proyecto:
 
 ## 4. Demo del Proyecto
 
+Backend realizado con firebase.
+
 [Demo del Proyecto](https://oriananohemi.github.io/burger-queen/)
 
 Inicie sesion con:
