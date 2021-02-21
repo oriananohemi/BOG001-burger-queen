@@ -5,7 +5,7 @@
 - [1. Resumen del proyecto](#1-resumen-del-proyecto)
 - [2. Objetivos de aprendizaje](#2-objetivos-de-aprendizaje)
 - [3. Prototipo](#3-prototipo)
-- [4. Prototipo](#4-demo)
+- [4. Demo](#4-demo)
 - [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
 
 ---
