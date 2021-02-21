@@ -52,10 +52,15 @@ export class CheckoutComponent implements OnInit {
     }
   }
 
+  removeAllProducts() {
+    this.cartService.removeAllProducts()
+  }
+
   save() {
     if(this.waiter !== null) {
       this.cartService.addOrder()
       .then(() => {
+        this.cartService.removeAllProducts()
         this.request = 'success';
       })
       .catch(() => this.request = 'error');

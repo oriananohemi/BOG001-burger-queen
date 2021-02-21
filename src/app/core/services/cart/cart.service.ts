@@ -56,6 +56,10 @@ export class CartService {
     this.productsSubject.next(this.products);
   }
 
+  removeAllProducts() {
+    this.productsSubject.next([])
+  }
+
   addOrder(): Promise<void> {
     const id = this.afs.createId();
     const order: Order = {

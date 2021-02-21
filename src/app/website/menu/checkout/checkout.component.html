@@ -10,11 +10,14 @@
         </app-product-checkout>
       </div>
       <h3 class="checkout__total">Total: {{ total$ | async }} </h3>
-      <button class="button-long" (click)="save()">Confirmar</button>
+      <div class="flex-container">
+        <button class="button-medium" (click)="removeAllProducts()">Limpiar carrito</button>
+        <button class="button-medium" (click)="save()">Confirmar</button>
+      </div>
     </div>
 
     <ng-template #elseSection>
-      <span (click)="hide()">X</span>
+      <span class="checkout__close" (click)="hide()">X</span>
       <p>Aun no hay productos</p>
     </ng-template>
   </section>
