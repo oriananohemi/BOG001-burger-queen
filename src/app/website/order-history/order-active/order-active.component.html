@@ -1,6 +1,10 @@
 <article class="order">
-  <h3>{{ order?.name }}</h3>
-  <h3>{{ order?.total }}</h3>
+  <h3>Cliente: {{ order?.name }}</h3>
+  <h3>Total: {{ order?.total }}</h3>
+  <div class="flex-container">
+    <h4>Producto</h4>
+    <span>Cantidad</span>
+  </div>
   <ul *ngFor="let ped of order.productsArray">
     <li class="flex-container">
       <h4>{{ ped.name }}</h4>
